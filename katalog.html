@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Kebaya Wisuda & Lamaran | Kagumi Sewa Kebaya Bandar Lampung</title>
+  <meta name="description" content="Jelajahi katalog lengkap kebaya modern Kagumi Sewa Kebaya Way Halim, Bandar Lampung. Tersedia kebaya wisuda, lamaran, dan pesta dengan layanan Free Resize & Free Laundry.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="logo-kagumi.png" type="image/png">
+  <link rel="apple-touch-icon" href="logo-kagumi.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#c5a059',
+              'gold-light': '#f5efdf',
+              rose: '#d48b96',
+              'rose-light': '#fdf0f2',
+              dark: '#1c1917',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#faf9f6] text-stone-800 antialiased min-h-screen flex flex-col justify-between selection:bg-rose-100 selection:text-stone-900">
+
+  <!-- ========================================== -->
+  <!-- 1. NAVBAR / HEADER (Sticky & Responsif)     -->
+  <!-- ========================================== -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/80 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo & Branding -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img 
+            src="logo-kagumi.png" 
+            alt="Kagumi Sewa Kebaya Logo" 
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform border border-amber-200/50"
+          />
+          <div class="flex flex-col">
+            <span class="font-serif text-lg sm:text-xl font-bold tracking-tight text-stone-900 leading-none">
+              Kagumi
+            </span>
+            <span class="text-[10px] tracking-widest uppercase font-semibold text-amber-800 mt-0.5">
+              Sewa Kebaya
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu Navigasi -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+          <a href="index.html" class="hover:text-stone-900 hover:font-semibold transition">Beranda</a>
+          <a href="katalog.html" class="text-stone-950 font-bold border-b-2 border-stone-900 pb-0.5 transition">Katalog Kebaya</a>
+          <a href="tentang.html" class="hover:text-stone-900 hover:font-semibold transition">Tentang</a>
+          <a href="artikel.html" class="hover:text-stone-900 hover:font-semibold transition">Artikel</a>
+          <a href="kontak.html" class="hover:text-stone-900 hover:font-semibold transition">Kontak</a>
+        </nav>
+
+        <!-- CTA Action Buttons (Desktop) -->
+        <div class="hidden md:flex items-center gap-3">
+          <button 
+            onclick="openTermsModal()" 
+            class="text-xs font-semibold text-stone-600 hover:text-stone-900 px-3 py-2 rounded-lg hover:bg-stone-100 transition">
+            <i class="fa-solid fa-file-contract mr-1 text-amber-700"></i> Syarat & Ketentuan
+          </button>
+
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Pesan Sekarang</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex items-center gap-2 md:hidden">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#25D366] text-white text-sm shadow-sm"
+            aria-label="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </a>
+          <button 
+            id="mobile-menu-btn" 
+            class="p-2 rounded-lg text-stone-700 hover:text-stone-900 hover:bg-stone-100 focus:outline-none"
+            aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-5 shadow-lg">
+      <div class="flex flex-col space-y-3 text-sm font-medium text-stone-700">
+        <a href="index.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Beranda</a>
+        <a href="katalog.html" class="mobile-nav-link py-2 px-3 rounded-lg bg-stone-100 font-bold text-stone-900">Katalog Kebaya</a>
+        <a href="tentang.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Tentang Kami</a>
+        <a href="artikel.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Artikel & Tips</a>
+        <a href="kontak.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Kontak & Studio</a>
+        <button onclick="openTermsModal()" class="text-left py-2 px-3 rounded-lg hover:bg-stone-50 text-amber-800 font-semibold flex items-center gap-2">
+          <i class="fa-solid fa-file-contract"></i> Syarat & Ketentuan Sewa
+        </button>
+        <div class="pt-2">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] text-white font-semibold shadow">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Pesan Sekarang via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 2. HERO SECTION KATALOG                    -->
+  <!-- ========================================== -->
+  <main class="flex-1">
+    <section class="relative bg-gradient-to-b from-stone-100/90 via-[#faf8f5] to-white py-12 sm:py-16 border-b border-stone-200/60 overflow-hidden">
+      <!-- Glow Dekorasi -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-amber-100/40 blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-rose-100/40 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-xs text-stone-500 mb-6 font-medium">
+          <a href="index.html" class="hover:text-stone-900 transition flex items-center gap-1">
+            <i class="fa-solid fa-house text-[11px]"></i>
+            <span>Beranda</span>
+          </a>
+          <span class="text-stone-300">/</span>
+          <span class="text-stone-900 font-semibold">Katalog Kebaya</span>
+        </nav>
+
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200/60 text-amber-800 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-wand-magic-sparkles text-[11px]"></i>
+            <span>Koleksi Eksklusif Way Halim, B. Lampung</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-900 tracking-tight leading-tight">
+            Katalog Kebaya Modern & Elegan
+          </h1>
+
+          <p class="text-stone-600 text-xs sm:text-sm md:text-base leading-relaxed mt-4">
+            Temukan koleksi kebaya wisuda, tunangan, lamaran, dan pesta terbaik kami. Setiap busana telah melalui kurasi payet butik premium dan dilengkapi fasilitas <strong>Free Custom Resize Fit</strong> serta <strong>Free Laundry Treatment</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. FILTER, PENCARIAN & GRID KATALOG        -->
+    <!-- ========================================== -->
+    <section id="catalog-top" class="py-10 sm:py-14 bg-[#faf9f6]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Kontrol Filter, Pencarian, & Urutan -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 border border-stone-200/80 shadow-sm mb-10 space-y-5">
+          
+          <!-- Baris Atas: Search & Sorting -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+            <!-- Search Bar -->
+            <div class="relative flex-1">
+              <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 text-sm"></i>
+              <input 
+                type="text" 
+                id="catalog-search-input" 
+                oninput="handleCatalogSearch()"
+                placeholder="Cari kebaya wisuda, emerald, rose gold, beludru..." 
+                class="w-full pl-11 pr-10 py-3 rounded-2xl border border-stone-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-stone-900 bg-stone-50/60 transition"
+              />
+              <button 
+                id="clear-search-btn" 
+                onclick="clearSearch()" 
+                class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 text-xs">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <!-- Sorting Select -->
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <label for="catalog-sort" class="text-xs font-semibold text-stone-600 hidden sm:inline whitespace-nowrap">
+                Urutkan:
+              </label>
+              <select 
+                id="catalog-sort" 
+                onchange="handleSortChange(this.value)"
+                class="px-4 py-3 rounded-2xl border border-stone-200 text-xs sm:text-sm font-medium bg-stone-50/60 focus:outline-none focus:ring-2 focus:ring-stone-900 text-stone-700 transition">
+                <option value="featured">Paling Populer</option>
+                <option value="price-asc">Harga: Terendah ke Tertinggi</option>
+                <option value="price-desc">Harga: Tertinggi ke Terendah</option>
+                <option value="rating-desc">Rating Tertinggi (⭐)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Baris Bawah: Filter Kategori Tombol Tab -->
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none text-xs">
+            <button 
+              onclick="filterCatalog('all')" 
+              data-cat="all" 
+              class="cat-filter-btn px-4 py-2 rounded-xl bg-neutral-900 text-white font-semibold transition whitespace-nowrap shadow-sm">
+              Semua Koleksi
+            </button>
+            <button 
+              onclick="filterCatalog('wisuda')" 
+              data-cat="wisuda" 
+              class="cat-filter-btn px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 font-semibold transition whitespace-nowrap">
+              Wisuda Series
+            </button>
+            <button 
+              onclick="filterCatalog('engagement')" 
+              data-cat="engagement" 
+              class="cat-filter-btn px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 font-semibold transition whitespace-nowrap">
+              Engagement & Lamaran
+            </button>
+            <button 
+              onclick="filterCatalog('emerald')" 
+              data-cat="emerald" 
+              class="cat-filter-btn px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 font-semibold transition whitespace-nowrap">
+              Emerald Blue Series
+            </button>
+            <button 
+              onclick="filterCatalog('matcha')" 
+              data-cat="matcha" 
+              class="cat-filter-btn px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 font-semibold transition whitespace-nowrap">
+              Matcha Strobe
+            </button>
+            <button 
+              onclick="filterCatalog('butter')" 
+              data-cat="butter" 
+              class="cat-filter-btn px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 font-semibold transition whitespace-nowrap">
+              Butter Yellow & Gold
+            </button>
+            <button 
+              onclick="filterCatalog('pastel')" 
+              data-cat="pastel" 
+              class="cat-filter-btn px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 font-semibold transition whitespace-nowrap">
+              Earthy & Pastel
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Info Hasil Filter / Reset -->
+        <div id="filter-status" class="hidden mb-6 flex items-center justify-between text-xs text-stone-600 bg-white px-4 py-3 rounded-2xl border border-stone-200/80">
+          <span id="filter-status-text">Menampilkan hasil...</span>
+          <button onclick="resetCatalogFilters()" class="text-amber-800 font-bold hover:underline flex items-center gap-1">
+            <i class="fa-solid fa-rotate-left text-[11px]"></i>
+            <span>Reset Filter</span>
+          </button>
+        </div>
+
+        <!-- Grid Koleksi Kebaya (Responsif 2 2 pada mobile, 3 3 pada desktop) -->
+        <div id="catalog-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6 lg:gap-8">
+          <!-- Di-render dinamis oleh script JS -->
+        </div>
+
+        <!-- State Kosong jika tidak ada hasil -->
+        <div id="empty-catalog-state" class="hidden text-center py-16 bg-white rounded-3xl border border-stone-200 p-8 max-w-md mx-auto">
+          <div class="w-16 h-16 rounded-full bg-stone-100 text-stone-400 flex items-center justify-center mx-auto text-2xl mb-4">
+            <i class="fa-solid fa-shirt"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-stone-900 mb-1">Kebaya Tidak Ditemukan</h3>
+          <p class="text-xs text-stone-500 mb-6">
+            Koleksi dengan kata kunci atau filter tersebut belum tersedia. Coba gunakan kata kunci lain atau reset filter.
+          </p>
+          <button 
+            onclick="resetCatalogFilters()" 
+            class="px-5 py-2.5 rounded-xl bg-neutral-900 text-white text-xs font-semibold hover:bg-neutral-800 transition">
+            Lihat Semua Kebaya
+          </button>
+        </div>
+
+        <!-- Kontrol Pagination (Hanya muncul jika item melebihi 6) -->
+        <div id="catalog-pagination" class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-stone-200/80">
+          <!-- Di-render dinamis oleh script JS -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 4. MODAL DETAIL PRODUK KEBAYA              -->
+  <!-- ========================================== -->
+  <div id="product-modal" class="modal-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="modal-content bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-stone-100 flex items-center justify-between bg-stone-50/50 flex-shrink-0">
+        <div class="flex items-center gap-2">
+          <span id="modal-product-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900">
+            Koleksi Kagumi
+          </span>
+          <span id="modal-product-category" class="text-xs text-stone-500 font-medium">
+            Wisuda Series
+          </span>
+        </div>
+        <button 
+          onclick="closeProductModal()" 
+          class="w-8 h-8 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 flex items-center justify-center transition"
+          aria-label="Tutup Detail">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="p-6 overflow-y-auto space-y-6">
+        
+        <!-- Galeri Gambar & Info Utama -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+          <div>
+            <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-inner">
+              <img id="modal-product-image" src="" alt="Kebaya Detail" class="w-full h-full object-cover">
+            </div>
+            <!-- Thumbnail Gallery -->
+            <div id="modal-product-gallery" class="flex gap-2.5 mt-3 overflow-x-auto pb-1">
+              <!-- Thumbnail di-render dinamis -->
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <h2 id="modal-product-title" class="font-serif text-xl sm:text-2xl font-bold text-stone-900">
+                Nama Kebaya
+              </h2>
+              <div class="flex items-center gap-2 mt-1.5 text-xs text-stone-500">
+                <span id="modal-product-rating" class="font-bold text-amber-600 flex items-center gap-1">
+                  <i class="fa-solid fa-star text-[11px]"></i> 5.0
+                </span>
+                <span>•</span>
+                <span id="modal-product-reviews">40+ Ulasan Klien</span>
+              </div>
+            </div>
+
+            <!-- Harga Sewa -->
+            <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/60">
+              <span class="text-[11px] text-amber-800 uppercase tracking-wider font-semibold block">Harga Sewa Busana</span>
+              <div class="flex items-baseline gap-2 mt-0.5">
+                <span id="modal-product-price" class="font-serif text-2xl font-bold text-stone-900">Rp 250.000</span>
+                <span class="text-xs text-stone-500">/ 3 Hari Pemakaian</span>
+              </div>
+              <p class="text-[11px] text-amber-900 mt-1.5 font-medium">
+                <i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Termasuk Free Custom Resize & Free Laundry
+              </p>
+            </div>
+
+            <!-- Pilihan Ukuran -->
+            <div>
+              <label class="block text-xs font-bold text-stone-900 mb-1.5">Pilihan Ukuran & Fitting</label>
+              <div id="modal-product-sizes" class="flex flex-wrap gap-1.5">
+                <!-- Di-render dinamis -->
+              </div>
+              <p class="text-[11px] text-stone-500 mt-1.5">
+                *Tersedia fitting langsung di studio Way Halim untuk disesuaikan dengan lingkar dada Anda.
+              </p>
+            </div>
+
+            <!-- Bahan / Material -->
+            <div>
+              <label class="block text-xs font-bold text-stone-900 mb-1">Material & Ornamen</label>
+              <p id="modal-product-material" class="text-xs text-stone-600 leading-relaxed bg-stone-50 p-3 rounded-xl border border-stone-200/70">
+                French Chantilly Lace dengan Payet Mutiara
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Deskripsi & Paket Termasuk -->
+        <div class="space-y-4 pt-2 border-t border-stone-100">
+          <div>
+            <h4 class="text-xs font-bold text-stone-900 uppercase tracking-wider mb-2">Deskripsi Busana</h4>
+            <p id="modal-product-desc" class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Deskripsi kebaya lengkap...
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold text-stone-900 uppercase tracking-wider mb-2">Paket Sewa Termasuk</h4>
+            <ul id="modal-product-includes" class="space-y-1.5 text-xs text-stone-600">
+              <!-- Di-render dinamis -->
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-4 border-t border-stone-200 bg-stone-50 flex flex-col sm:flex-row items-center justify-between gap-3 flex-shrink-0">
+        <button 
+          onclick="closeProductModal()" 
+          class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-stone-200 hover:bg-stone-300 text-stone-800 text-xs font-semibold transition">
+          Tutup
+        </button>
+
+        <a 
+          id="modal-product-wa-btn" 
+          href="#" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-bold shadow transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Pesan Kebaya via WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 5. MODAL SYARAT & KETENTUAN SEWA           -->
+  <!-- ========================================== -->
+  <div id="terms-modal" class="modal-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="modal-content bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+      <div class="p-6 border-b border-stone-200 flex items-center justify-between bg-stone-50">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
+            <i class="fa-solid fa-file-contract"></i>
+          </div>
+          <div>
+            <h3 class="font-serif text-lg font-bold text-stone-900 leading-tight">Syarat & Ketentuan Sewa</h3>
+            <p class="text-xs text-stone-500">Kagumi Sewa Kebaya Way Halim, Bandar Lampung</p>
+          </div>
+        </div>
+        <button onclick="closeTermsModal()" class="w-8 h-8 rounded-full bg-stone-200 hover:bg-stone-300 text-stone-700 flex items-center justify-center transition" aria-label="Tutup Syarat">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div id="terms-list-container" class="p-6 overflow-y-auto space-y-4">
+        <!-- Di-render dinamis oleh JS -->
+      </div>
+
+      <div class="p-4 border-t border-stone-200 bg-stone-50 flex justify-end">
+        <button onclick="closeTermsModal()" class="px-5 py-2.5 rounded-xl bg-neutral-900 text-white text-xs font-semibold hover:bg-neutral-800 transition">
+          Saya Mengerti
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 6. FOOTER                                  -->
+  <!-- ========================================== -->
+  <footer class="bg-neutral-950 text-stone-400 text-xs py-12 border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-stone-800">
+        
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2.5 text-white font-serif text-lg font-bold mb-3">
+            <img src="logo-kagumi.png" alt="Kagumi Sewa Kebaya Logo" class="w-8 h-8 rounded-full object-cover border border-amber-300/40">
+            <span>Kagumi Sewa Kebaya</span>
+          </div>
+          <p class="text-stone-400 text-xs sm:text-sm max-w-sm leading-relaxed mb-4">
+            Pusat persewaan kebaya modern terpercaya di Way Halim, Bandar Lampung. Menghadirkan kecantikan tradisi dalam balutan gaya masa kini untuk wisuda, lamaran, dan perayaan istimewa Anda.
+          </p>
+          <div class="flex items-center gap-3 text-stone-300">
+            <a href="https://instagram.com/kagumi.sewakebaya" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition" aria-label="Instagram">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://wa.me/6282281998800" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Way+Halim+Bandar+Lampung" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition" aria-label="Google Maps">
+              <i class="fa-solid fa-location-dot text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold mb-3">Tautan Cepat</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-white transition">Beranda Utama</a></li>
+            <li><a href="katalog.html" class="text-white font-semibold">Katalog Kebaya</a></li>
+            <li><a href="tentang.html" class="hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="artikel.html" class="hover:text-white transition">Artikel & Tips</a></li>
+            <li><a href="kontak.html" class="hover:text-white transition">Kontak & Studio</a></li>
+            <li><button onclick="openTermsModal()" class="hover:text-white transition text-left">Syarat & Ketentuan Sewa</button></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold mb-3">Informasi Studio</h4>
+          <ul class="space-y-2 text-stone-400">
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+              <span>+62 822-8199-8800</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-instagram text-pink-400"></i>
+              <span>@kagumi.sewakebaya</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-amber-500 mt-0.5"></i>
+              <span>Way Halim, Bandar Lampung (Area PKOR Way Halim)</span>
+            </li>
+            <li class="flex items-center gap-2 text-stone-400 pt-1">
+              <i class="fa-regular fa-clock text-stone-400"></i>
+              <span>Buka Setiap Hari (09.00 - 18.00 WIB)</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-stone-500 text-[11px] gap-4">
+        <div>
+          &copy; 2026 Kagumi Sewa Kebaya. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="javascript:void(0)" onclick="openTermsModal()" class="hover:text-stone-400 transition">Syarat & Ketentuan Sewa</a>
+          <span>&bull;</span>
+          <span>Way Halim, Bandar Lampung</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- 7. FLOATING WHATSAPP BUTTON                -->
+  <!-- ========================================== -->
+  <aside aria-label="Bantuan WhatsApp Cepat">
+    <a 
+      href="https://wa.me/6282281998800?text=Halo%20Admin%20Kagumi%2C%20saya%20ingin%20tanya%20sewa%20kebaya%20di%20katalog." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl hover:bg-[#20ba59] transition-all transform hover:scale-105 flex items-center gap-2.5 group"
+      aria-label="Chat WhatsApp Admin Kagumi">
+      <i class="fa-brands fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
+      <span class="hidden sm:inline font-bold text-xs">Tanya Stylist Kagumi</span>
+    </a>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- 8. DATA & LOGIC SCRIPTS                    -->
+  <!-- ========================================== -->
+  <script src="js/data.js"></script>
+  <script>
+    // State Manajemen Katalog
+    const ITEMS_PER_PAGE = 6;
+    let currentPage = 1;
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let sortMethod = 'featured';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Periksa query string URL (?kategori=xxx) jika ada
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('kategori');
+      if (catParam) {
+        activeCategory = catParam;
+      }
+
+      renderCatalog();
+      renderRentalTerms();
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          const isClosed = mobileMenu.classList.toggle('hidden');
+          const icon = mobileBtn.querySelector('i');
+          if (icon) icon.className = isClosed ? 'fa-solid fa-bars text-xl' : 'fa-solid fa-xmark text-xl';
+        });
+
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            const icon = mobileBtn.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-bars text-xl';
+          });
+        });
+      }
+    });
+
+    // Format Mata Uang Rupiah
+    function formatRupiah(number) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        maximumFractionDigits: 0
+      }).format(number);
+    }
+
+    // Fungsi Utama Render Katalog
+    function renderCatalog() {
+      const grid = document.getElementById('catalog-grid');
+      const emptyState = document.getElementById('empty-catalog-state');
+      const paginationContainer = document.getElementById('catalog-pagination');
+      const filterStatus = document.getElementById('filter-status');
+      const filterStatusText = document.getElementById('filter-status-text');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+
+      if (!grid) return;
+
+      // Filter Berdasarkan Kategori & Pencarian
+      let filtered = PRODUCTS.filter(p => {
+        const matchesCategory = (activeCategory === 'all') || (p.category === activeCategory);
+        const query = searchQuery.toLowerCase().trim();
+        const matchesSearch = !query || 
+          p.name.toLowerCase().includes(query) ||
+          p.categoryName.toLowerCase().includes(query) ||
+          p.description.toLowerCase().includes(query) ||
+          p.material.toLowerCase().includes(query);
+
+        return matchesCategory && matchesSearch;
+      });
+
+      // Sorting
+      if (sortMethod === 'price-asc') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (sortMethod === 'price-desc') {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (sortMethod === 'rating-desc') {
+        filtered.sort((a, b) => b.rating - a.rating);
+      }
+
+      // Update Filter Status UI
+      if (activeCategory !== 'all' || searchQuery) {
+        filterStatus.classList.remove('hidden');
+        let text = `Menemukan <strong>${filtered.length}</strong> kebaya`;
+        if (activeCategory !== 'all') {
+          const sample = PRODUCTS.find(p => p.category === activeCategory);
+          const catName = sample ? sample.categoryName : activeCategory;
+          text += ` di kategori <em>"${catName}"</em>`;
+        }
+        if (searchQuery) {
+          text += ` dengan kata kunci <em>"${searchQuery}"</em>`;
+        }
+        filterStatusText.innerHTML = text;
+      } else {
+        filterStatus.classList.add('hidden');
+      }
+
+      if (clearSearchBtn) {
+        if (searchQuery) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+      }
+
+      // Kondisi Kosong
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        if (paginationContainer) {
+          paginationContainer.classList.add('hidden');
+          paginationContainer.innerHTML = '';
+        }
+        updateFilterButtons();
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      // Kalkulasi Pagination
+      const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+      if (currentPage > totalPages) {
+        currentPage = totalPages;
+      }
+      if (currentPage < 1) {
+        currentPage = 1;
+      }
+
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, filtered.length);
+      const paginatedItems = filtered.slice(startIndex, endIndex);
+
+      // Render Item Card
+      grid.innerHTML = paginatedItems.map(item => `
+        <article class="bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <!-- Gambar Rasio 3:4 dengan Badge -->
+            <div class="relative aspect-[3/4] overflow-hidden bg-stone-100">
+              <img 
+                src="${item.image}" 
+                alt="${item.name}" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              
+              <div class="absolute top-2 left-2 sm:top-3.5 sm:left-3.5 flex flex-col gap-1.5 items-start">
+                <span class="bg-neutral-900/90 text-white text-[9px] sm:text-[11px] font-bold px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-md backdrop-blur-sm">
+                  ${item.badge}
+                </span>
+              </div>
+
+              <div class="absolute top-2 right-2 sm:top-3.5 sm:right-3.5 bg-white/95 text-stone-800 text-[9px] sm:text-[11px] font-bold px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full shadow-md flex items-center gap-1 backdrop-blur-sm">
+                <i class="fa-solid fa-star text-amber-500 text-[8px] sm:text-[10px]"></i>
+                <span>${item.rating}</span>
+                <span class="text-stone-400 font-normal hidden sm:inline">(${item.reviewsCount})</span>
+              </div>
+
+              <!-- Quick View Overlay -->
+              <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                <span class="px-4 py-2 rounded-full bg-white/90 text-stone-900 text-xs font-bold shadow-lg backdrop-blur-sm transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                  <i class="fa-solid fa-eye mr-1.5"></i> Lihat Detail
+                </span>
+              </div>
+            </div>
+
+            <!-- Detail Info -->
+            <div class="p-3 sm:p-5 lg:p-6">
+              <div class="flex items-center justify-between text-[10px] sm:text-xs text-stone-500 mb-1 sm:mb-1.5">
+                <span class="text-amber-800 font-semibold tracking-wide uppercase text-[9px] sm:text-[10px] truncate">
+                  ${item.categoryName}
+                </span>
+                <span class="text-[9px] sm:text-[11px] text-stone-400 whitespace-nowrap">
+                  Sewa ${item.rentalDuration}
+                </span>
+              </div>
+
+              <h3 
+                onclick="openProductModal(${item.id})"
+                class="font-serif text-xs sm:text-base lg:text-lg font-bold text-stone-900 group-hover:text-amber-900 transition cursor-pointer line-clamp-1 leading-snug">
+                ${item.name}
+              </h3>
+
+              <p class="text-[11px] sm:text-xs text-stone-500 mt-1 sm:mt-2 line-clamp-2 leading-relaxed">
+                ${item.description}
+              </p>
+
+              <!-- Fitur Layanan Mini -->
+              <div class="mt-2.5 sm:mt-3.5 flex flex-wrap gap-1 sm:gap-1.5">
+                <span class="text-[8px] sm:text-[10px] font-semibold bg-stone-100 text-stone-700 px-1.5 py-0.5 sm:px-2 sm:py-0.5 rounded-md border border-stone-200/60">
+                  <i class="fa-solid fa-scissors text-amber-700 mr-0.5 sm:mr-1"></i>Free Resize
+                </span>
+                <span class="text-[8px] sm:text-[10px] font-semibold bg-emerald-50 text-emerald-800 px-1.5 py-0.5 sm:px-2 sm:py-0.5 rounded-md border border-emerald-200/60">
+                  <i class="fa-solid fa-wand-magic-sparkles text-emerald-600 mr-0.5 sm:mr-1"></i>Free Laundry
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bagian Bawah: Harga & Aksi -->
+          <div class="p-3 sm:p-5 lg:p-6 pt-0 border-t border-stone-100 mt-2">
+            <div class="flex items-center justify-between pt-2.5 sm:pt-4 mb-2.5 sm:mb-4">
+              <div>
+                <span class="text-[8px] sm:text-[10px] text-stone-400 block uppercase tracking-wider font-semibold">Harga Sewa</span>
+                <span class="font-serif text-xs sm:text-lg lg:text-xl font-bold text-stone-900">${formatRupiah(item.price)}</span>
+              </div>
+              <button 
+                onclick="openProductModal(${item.id})" 
+                class="text-[10px] sm:text-xs font-bold text-amber-800 hover:text-amber-950 underline underline-offset-4 hidden sm:inline">
+                Detail Lengkap
+              </button>
+            </div>
+
+            <div class="grid grid-cols-2 gap-1.5 sm:gap-2">
+              <button 
+                onclick="openProductModal(${item.id})"
+                class="py-1.5 sm:py-2.5 px-2 sm:px-3 rounded-lg sm:rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-[10px] sm:text-xs font-semibold text-center transition flex items-center justify-center gap-1">
+                <i class="fa-solid fa-circle-info text-[9px] sm:text-[11px]"></i>
+                <span>Detail</span>
+              </button>
+
+              <a 
+                href="${getWhatsAppProductUrl(item.name, formatRupiah(item.price))}" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="py-1.5 sm:py-2.5 px-2 sm:px-3 rounded-lg sm:rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-[10px] sm:text-xs font-bold text-center shadow-sm transition flex items-center justify-center gap-1">
+                <i class="fa-brands fa-whatsapp text-xs sm:text-sm"></i>
+                <span>Sewa</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+
+      // Render Pagination Kontrol (Hanya jika jumlah artikel/produk melebihi 6)
+      if (paginationContainer) {
+        if (filtered.length > ITEMS_PER_PAGE) {
+          paginationContainer.classList.remove('hidden');
+
+          let pageButtonsHtml = '';
+          for (let p = 1; p <= totalPages; p++) {
+            if (p === currentPage) {
+              pageButtonsHtml += `
+                <button 
+                  onclick="changePage(${p})" 
+                  class="w-9 h-9 rounded-xl bg-neutral-900 text-white text-xs font-bold shadow-sm transition">
+                  ${p}
+                </button>
+              `;
+            } else {
+              pageButtonsHtml += `
+                <button 
+                  onclick="changePage(${p})" 
+                  class="w-9 h-9 rounded-xl bg-white hover:bg-stone-100 text-stone-700 text-xs font-semibold border border-stone-200 transition">
+                  ${p}
+                </button>
+              `;
+            }
+          }
+
+          paginationContainer.innerHTML = `
+            <div class="text-xs text-stone-500">
+              Menampilkan <span class="font-bold text-stone-900">${startIndex + 1} - ${endIndex}</span> dari <span class="font-bold text-stone-900">${filtered.length}</span> koleksi kebaya
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button 
+                onclick="changePage(${currentPage - 1})"
+                ${currentPage === 1 ? 'disabled class="px-3.5 py-2 rounded-xl bg-stone-100 text-stone-300 text-xs font-semibold cursor-not-allowed"' : 'class="px-3.5 py-2 rounded-xl bg-white hover:bg-stone-100 text-stone-700 text-xs font-semibold border border-stone-200 transition flex items-center gap-1.5"'}>
+                <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                <span>Sebelumnya</span>
+              </button>
+
+              <div class="flex items-center gap-1.5">
+                ${pageButtonsHtml}
+              </div>
+
+              <button 
+                onclick="changePage(${currentPage + 1})"
+                ${currentPage === totalPages ? 'disabled class="px-3.5 py-2 rounded-xl bg-stone-100 text-stone-300 text-xs font-semibold cursor-not-allowed"' : 'class="px-3.5 py-2 rounded-xl bg-white hover:bg-stone-100 text-stone-700 text-xs font-semibold border border-stone-200 transition flex items-center gap-1.5"'}>
+                <span>Selanjutnya</span>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+              </button>
+            </div>
+          `;
+        } else {
+          paginationContainer.classList.add('hidden');
+          paginationContainer.innerHTML = '';
+        }
+      }
+
+      updateFilterButtons();
+    }
+
+    // Update Tampilan Tombol Filter Tab Aktif
+    function updateFilterButtons() {
+      document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+        if (btn.dataset.cat === activeCategory) {
+          btn.classList.add('bg-neutral-900', 'text-white');
+          btn.classList.remove('bg-stone-100', 'text-stone-700', 'hover:bg-stone-200');
+        } else {
+          btn.classList.remove('bg-neutral-900', 'text-white');
+          btn.classList.add('bg-stone-100', 'text-stone-700', 'hover:bg-stone-200');
+        }
+      });
+    }
+
+    // Ganti Halaman Pagination
+    window.changePage = function(page) {
+      currentPage = page;
+      renderCatalog();
+      const topSection = document.getElementById('catalog-top');
+      if (topSection) {
+        topSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    // Filter Kategori
+    window.filterCatalog = function(cat) {
+      activeCategory = cat;
+      currentPage = 1;
+      renderCatalog();
+    };
+
+    // Input Pencarian
+    window.handleCatalogSearch = function() {
+      const input = document.getElementById('catalog-search-input');
+      searchQuery = input ? input.value : '';
+      currentPage = 1;
+      renderCatalog();
+    };
+
+    // Reset Search
+    window.clearSearch = function() {
+      const input = document.getElementById('catalog-search-input');
+      if (input) input.value = '';
+      searchQuery = '';
+      currentPage = 1;
+      renderCatalog();
+    };
+
+    // Ubah Pengurutan
+    window.handleSortChange = function(val) {
+      sortMethod = val;
+      currentPage = 1;
+      renderCatalog();
+    };
+
+    // Reset Semua Filter
+    window.resetCatalogFilters = function() {
+      activeCategory = 'all';
+      searchQuery = '';
+      sortMethod = 'featured';
+      currentPage = 1;
+      const input = document.getElementById('catalog-search-input');
+      if (input) input.value = '';
+      const sortSelect = document.getElementById('catalog-sort');
+      if (sortSelect) sortSelect.value = 'featured';
+      renderCatalog();
+    };
+
+    // URL Pemesanan WhatsApp Otomatis
+    function getWhatsAppProductUrl(productName, price) {
+      const message = `Halo Admin Kagumi Sewa Kebaya, saya tertarik menyewa busana berikut:\n\n• *Model*: ${productName}\n• *Harga Sewa*: ${price} / 3 hari\n• *Lokasi Studio*: Way Halim, Bandar Lampung\n\nApakah busana ini masih tersedia untuk jadwal pemakaian saya? Terima kasih!`;
+      return `https://wa.me/${BUSINESS_DATA.whatsappNumber}?text=${encodeURIComponent(message)}`;
+    }
+
+    // Modal Detail Produk
+    window.openProductModal = function(id) {
+      const product = PRODUCTS.find(p => p.id === id);
+      if (!product) return;
+
+      const modal = document.getElementById('product-modal');
+      if (!modal) return;
+
+      document.getElementById('modal-product-image').src = product.image;
+      document.getElementById('modal-product-title').innerText = product.name;
+      document.getElementById('modal-product-category').innerText = product.categoryName;
+      document.getElementById('modal-product-badge').innerText = product.badge;
+      document.getElementById('modal-product-rating').innerHTML = `<i class="fa-solid fa-star text-[11px]"></i> ${product.rating}`;
+      document.getElementById('modal-product-reviews').innerText = `${product.reviewsCount} Ulasan Klien`;
+      document.getElementById('modal-product-price').innerText = formatRupiah(product.price);
+      document.getElementById('modal-product-material').innerText = product.material;
+      document.getElementById('modal-product-desc').innerText = product.description;
+
+      // Pilihan Ukuran
+      const sizesContainer = document.getElementById('modal-product-sizes');
+      sizesContainer.innerHTML = product.sizes.map(s => `
+        <span class="px-3 py-1 rounded-lg text-xs font-semibold ${s.includes('Free') ? 'bg-amber-100 text-amber-900 font-bold border border-amber-300' : 'bg-stone-100 text-stone-800 border border-stone-200'}">
+          ${s}
+        </span>
+      `).join('');
+
+      // Galeri Foto Tambahan
+      const galleryContainer = document.getElementById('modal-product-gallery');
+      const galleryImages = product.gallery && product.gallery.length ? product.gallery : [product.image];
+      galleryContainer.innerHTML = galleryImages.map(img => `
+        <button 
+          onclick="document.getElementById('modal-product-image').src = '${img}'" 
+          class="w-14 h-16 rounded-xl overflow-hidden border border-stone-200 hover:border-amber-800 transition flex-shrink-0">
+          <img src="${img}" alt="${product.name}" class="w-full h-full object-cover">
+        </button>
+      `).join('');
+
+      // Paket Termasuk
+      const includesContainer = document.getElementById('modal-product-includes');
+      includesContainer.innerHTML = product.includes.map(inc => `
+        <li class="flex items-start gap-2">
+          <i class="fa-solid fa-check text-emerald-600 mt-1 text-[11px]"></i>
+          <span>${inc}</span>
+        </li>
+      `).join('');
+
+      // Tombol WhatsApp Pesan
+      const waBtn = document.getElementById('modal-product-wa-btn');
+      waBtn.href = getWhatsAppProductUrl(product.name, formatRupiah(product.price));
+
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    };
+
+    window.closeProductModal = function() {
+      const modal = document.getElementById('product-modal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    };
+
+    // Modal Syarat & Ketentuan
+    function renderRentalTerms() {
+      const container = document.getElementById('terms-list-container');
+      if (!container || !RENTAL_TERMS) return;
+
+      container.innerHTML = RENTAL_TERMS.map((t, idx) => `
+        <div class="p-4 sm:p-5 rounded-2xl bg-stone-50 border border-stone-200/80 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 text-base font-bold">
+            <i class="${t.icon}"></i>
+          </div>
+          <div>
+            <h4 class="text-xs sm:text-sm font-bold text-stone-900">${idx + 1}. ${t.title}</h4>
+            <p class="text-xs text-stone-600 mt-1 leading-relaxed">${t.description}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.openTermsModal = function() {
+      const modal = document.getElementById('terms-modal');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    };
+
+    window.closeTermsModal = function() {
+      const modal = document.getElementById('terms-modal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    };
+
+    // Tutup Modal ketika klik di luar konten
+    window.addEventListener('click', (e) => {
+      const prodModal = document.getElementById('product-modal');
+      const termsModal = document.getElementById('terms-modal');
+      if (e.target === prodModal) closeProductModal();
+      if (e.target === termsModal) closeTermsModal();
+    });
+  </script>
+</body>
+</html>

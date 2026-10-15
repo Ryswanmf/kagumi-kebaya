@@ -1,0 +1,18 @@
+Buatkan kode lengkap untuk website profil bisnis dan katalog sewa kebaya berbasis HTML, CSS (Tailwind CSS), dan JavaScript dengan ketentuan sebagai berikut:
+
+1. BAHASA: Seluruh teks pada website menggunakan Bahasa Indonesia.
+2. NAVIGASI (Navbar / Header):
+   - Desain modern, responsif, dan sticky di bagian atas.
+   - Menu navigasi berisi: Beranda, Katalog Kebaya, Tentang, Artikel, dan Kontak.
+   - Dilengkapi tombol aksi (CTA) khusus berwarna hijau khas WhatsApp dengan teks "Pesan Sekarang" yang mengarah ke link chat WhatsApp bisnis (contoh: https://wa.me/628xxxxxxxxxx).
+3. TEMA & TAMPILAN:
+   - Terinspirasi dari estetika profil Instagram bisnis sewa kebaya (seperti @kagumi.sewakebaya di Bandar Lampung).
+   - Nuansa warna elegan (kombinasi hitam/netral dengan aksen warna feminin seperti pink pastel / gold / earthy tone yang cocok untuk produk kebaya).
+4. FITUR UTAMA HALAMAN:
+   - Header Profil Bisnis: Menampilkan logo/foto profil, nama akun "Kagumi Sewa Kebaya", tombol "Ikuti" & "Kirim Pesan", statistik (kiriman, pengikut), serta bio singkat (Sewa Kebaya Wisuda & Lamaran, Lokasi Wayhalim Bandar Lampung, Free Resize & Laundry).
+   - Sorotan Cerita (Highlights): Lingkaran sorotan kategori warna kebaya (Emerald Blue, Matcha Strobe, Butter Yellow, Engagement, dll).
+   - Bagian Katalog Kebaya / Galeri Grid: Menampilkan pilihan foto produk kebaya lengkap dengan info harga dan tombol interaktif untuk melihat detail atau langsung memesan.
+   - Pop-up Syarat & Ketentuan Penyewaan: Kotak informasi atau modal yang merangkum aturan sewa (DP 50%, ketentuan pembatalan, batas waktu sewa 3 hari, larangan permak/cuci sendiri, dll).
+5. INTERAKSI JAVASCRIPT:
+   - Menu navigasi mobile (hamburger menu) untuk layar HP.
+   - Fitur modal pop-up interaktif untuk melihat Syarat & Ketentuan serta detail produk ketika diklik.

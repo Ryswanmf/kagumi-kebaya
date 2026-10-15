@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artikel & Inspirasi Kebaya | Kagumi Sewa Kebaya Bandar Lampung</title>
+  <meta name="description" content="Kumpulan tips memilih kebaya wisuda, inspirasi warna lamaran, panduan padu padan hijab, dan tips sewa kebaya dari Kagumi Sewa Kebaya Way Halim Bandar Lampung.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="logo-kagumi.png" type="image/png">
+  <link rel="apple-touch-icon" href="logo-kagumi.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#c5a059',
+              'gold-light': '#f5efdf',
+              rose: '#d48b96',
+              'rose-light': '#fdf0f2',
+              dark: '#1c1917',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#faf9f6] text-stone-800 antialiased min-h-screen flex flex-col justify-between selection:bg-rose-100 selection:text-stone-900">
+
+  <!-- ========================================== -->
+  <!-- 1. NAVBAR / HEADER (Sticky & Responsif)     -->
+  <!-- ========================================== -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/80 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo & Branding -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img 
+            src="logo-kagumi.png" 
+            alt="Kagumi Sewa Kebaya Logo" 
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform border border-amber-200/50"
+          />
+          <div class="flex flex-col">
+            <span class="font-serif text-lg sm:text-xl font-bold tracking-tight text-stone-900 leading-none">
+              Kagumi
+            </span>
+            <span class="text-[10px] tracking-widest uppercase font-semibold text-amber-800 mt-0.5">
+              Sewa Kebaya
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu Navigasi -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+          <a href="index.html#beranda" class="hover:text-stone-900 hover:font-semibold transition">Beranda</a>
+          <a href="katalog.html" class="hover:text-stone-900 hover:font-semibold transition">Katalog Kebaya</a>
+          <a href="tentang.html" class="hover:text-stone-900 hover:font-semibold transition">Tentang</a>
+          <a href="artikel.html" class="text-stone-950 font-bold border-b-2 border-stone-900 pb-0.5 transition">Artikel</a>
+          <a href="kontak.html" class="hover:text-stone-900 hover:font-semibold transition">Kontak</a>
+        </nav>
+
+        <!-- CTA WhatsApp Button (Desktop) -->
+        <div class="hidden md:flex items-center gap-3">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Pesan Sekarang</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex items-center gap-2 md:hidden">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#25D366] text-white text-sm shadow-sm"
+            aria-label="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </a>
+          <button 
+            id="mobile-menu-btn" 
+            class="p-2 rounded-lg text-stone-700 hover:text-stone-900 hover:bg-stone-100 focus:outline-none"
+            aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-5 shadow-lg">
+      <div class="flex flex-col space-y-3 text-sm font-medium text-stone-700">
+        <a href="index.html#beranda" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Beranda</a>
+        <a href="katalog.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Katalog Kebaya</a>
+        <a href="tentang.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Tentang Kami</a>
+        <a href="artikel.html" class="mobile-nav-link py-2 px-3 rounded-lg bg-stone-100 font-bold text-stone-900">Artikel & Tips</a>
+        <a href="kontak.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Kontak & Studio</a>
+        <div class="pt-2">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] text-white font-semibold shadow">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Pesan Sekarang via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 2. HERO SECTION HALAMAN ARTIKEL            -->
+  <!-- ========================================== -->
+  <main class="flex-1">
+    <section class="relative bg-gradient-to-b from-stone-100/90 via-[#faf8f5] to-white py-12 sm:py-16 border-b border-stone-200/60 overflow-hidden">
+      <!-- Glow Dekorasi -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-amber-100/40 blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-rose-100/40 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Breadcrumb Nav -->
+        <nav class="flex items-center gap-2 text-xs text-stone-500 mb-6">
+          <a href="index.html" class="hover:text-stone-900 transition flex items-center gap-1">
+            <i class="fa-solid fa-house text-[10px]"></i> Beranda
+          </a>
+          <span>/</span>
+          <span class="text-stone-800 font-semibold">Artikel & Inspirasi</span>
+        </nav>
+
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900 text-stone-100 text-xs font-semibold shadow-sm mb-4">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            <span>Blog & Tips Kagumi Sewa Kebaya</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-900 tracking-tight leading-[1.2]">
+            Inspirasi Busana, Tren Warna & Panduan Lengkap Kebaya
+          </h1>
+
+          <p class="text-sm sm:text-base text-stone-600 mt-4 leading-relaxed">
+            Temukan panduan praktis memilih kebaya wisuda, tren warna lamaran terkini, trik styling hijab, dan kiat hemat menyewa kebaya impian dari tim stylist Kagumi Sewa Kebaya di Bandar Lampung.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. DAFTAR ARTIKEL & PANDUAN KEBAYA         -->
+    <!-- ========================================== -->
+    <section id="article-section-top" class="py-10 sm:py-14 bg-[#faf8f5] border-b border-stone-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+          
+          <!-- Filter Kategori Buttons -->
+          <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 sm:pb-0" id="article-filter-container">
+            <button 
+              onclick="filterArticles('all')" 
+              data-cat="all"
+              class="art-filter-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-neutral-900 text-white transition">
+              Semua Artikel
+            </button>
+            <button 
+              onclick="filterArticles('Tips Wisuda')" 
+              data-cat="Tips Wisuda"
+              class="art-filter-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-white text-stone-700 hover:bg-stone-100 border border-stone-200 transition">
+              Tips Wisuda
+            </button>
+            <button 
+              onclick="filterArticles('Tren Fashion')" 
+              data-cat="Tren Fashion"
+              class="art-filter-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-white text-stone-700 hover:bg-stone-100 border border-stone-200 transition">
+              Tren Fashion
+            </button>
+            <button 
+              onclick="filterArticles('Smart Budget')" 
+              data-cat="Smart Budget"
+              class="art-filter-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-white text-stone-700 hover:bg-stone-100 border border-stone-200 transition">
+              Smart Budget
+            </button>
+            <button 
+              onclick="filterArticles('Tips Hijab')" 
+              data-cat="Tips Hijab"
+              class="art-filter-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-white text-stone-700 hover:bg-stone-100 border border-stone-200 transition">
+              Tips Hijab
+            </button>
+            <button 
+              onclick="filterArticles('Panduan Ukuran')" 
+              data-cat="Panduan Ukuran"
+              class="art-filter-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-white text-stone-700 hover:bg-stone-100 border border-stone-200 transition">
+              Panduan Ukuran
+            </button>
+          </div>
+
+          <!-- Search Input -->
+          <div class="relative w-full md:w-72">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 text-xs"></i>
+            <input 
+              type="text" 
+              id="article-search-input" 
+              placeholder="Cari artikel kebaya..." 
+              oninput="handleArticleSearch()"
+              class="w-full text-xs pl-9 pr-4 py-2.5 bg-white border border-stone-300 rounded-full focus:outline-none focus:border-stone-900 transition"
+            />
+          </div>
+
+        </div>
+
+        <!-- Grid Seluruh Artikel (Responsif 2 2 pada mobile, 3 3 pada desktop) -->
+        <div id="full-articles-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6 lg:gap-8">
+          <!-- Di-render dinamis oleh script JS -->
+        </div>
+
+        <!-- Kontrol Pagination (Hanya muncul jika artikel melebihi 6) -->
+        <div id="articles-pagination" class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-stone-200/80">
+          <!-- Di-render dinamis oleh script JS -->
+        </div>
+
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 6. MODAL BACA ARTIKEL LENGKAP              -->
+  <!-- ========================================== -->
+  <div id="article-modal" class="modal-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="modal-content bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+      
+      <div class="relative aspect-video sm:aspect-[21/9] overflow-hidden bg-stone-100 flex-shrink-0">
+        <img id="modal-article-img" src="" alt="Article Banner" class="w-full h-full object-cover">
+        <button 
+          onclick="closeArticleModal()" 
+          class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 hover:bg-black/80 text-white flex items-center justify-center transition shadow-lg"
+          aria-label="Tutup">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto">
+        <div class="flex items-center gap-3 text-xs text-stone-500 mb-2">
+          <span id="modal-article-category" class="font-semibold text-amber-800 bg-amber-50 px-2.5 py-0.5 rounded-md">Tips</span>
+          <span id="modal-article-date">12 Oktober 2026</span>
+        </div>
+        <h3 id="modal-article-title" class="font-serif text-xl sm:text-2xl font-bold text-stone-900 mb-4">
+          Judul Artikel
+        </h3>
+        <div id="modal-article-body" class="prose prose-stone prose-sm space-y-3">
+          <!-- Di-render dinamis -->
+        </div>
+      </div>
+
+      <div class="p-4 border-t border-stone-200 bg-stone-50 flex items-center justify-between">
+        <button 
+          onclick="closeArticleModal()" 
+          class="px-4 py-2 rounded-xl bg-stone-200 hover:bg-stone-300 text-stone-800 text-xs font-semibold transition">
+          Tutup Artikel
+        </button>
+        <a 
+          href="katalog.html" 
+          class="px-4 py-2 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold transition">
+          Lihat Katalog Kebaya &rarr;
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 7. FOOTER                                  -->
+  <!-- ========================================== -->
+  <footer class="bg-neutral-950 text-stone-400 text-xs py-12 border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-stone-800">
+        
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2.5 text-white font-serif text-lg font-bold mb-3">
+            <img src="logo-kagumi.png" alt="Kagumi Sewa Kebaya Logo" class="w-8 h-8 rounded-full object-cover border border-amber-300/40">
+            <span>Kagumi Sewa Kebaya</span>
+          </div>
+          <p class="text-stone-400 text-xs sm:text-sm max-w-sm leading-relaxed mb-4">
+            Pusat persewaan kebaya modern terpercaya di Way Halim, Bandar Lampung. Menghadirkan kecantikan tradisi dalam balutan gaya masa kini untuk wisuda, lamaran, dan perayaan istimewa Anda.
+          </p>
+          <div class="flex items-center gap-3 text-stone-300">
+            <a href="https://instagram.com/kagumi.sewakebaya" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://wa.me/6282281998800" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Way+Halim+Bandar+Lampung" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition">
+              <i class="fa-solid fa-location-dot text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold mb-3">Tautan Cepat</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html#beranda" class="hover:text-white transition">Beranda Utama</a></li>
+            <li><a href="katalog.html" class="hover:text-white transition">Katalog Kebaya</a></li>
+            <li><a href="tentang.html" class="hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="artikel.html" class="text-white font-semibold">Artikel & Tips</a></li>
+            <li><a href="kontak.html" class="hover:text-white transition">Kontak & Studio</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold mb-3">Topik Artikel</h4>
+          <ul class="space-y-2">
+            <li><button onclick="filterArticles('Tips Wisuda')" class="hover:text-white transition text-left">Tips Kebaya Wisuda</button></li>
+            <li><button onclick="filterArticles('Tren Fashion')" class="hover:text-white transition text-left">Tren Warna Lamaran</button></li>
+            <li><button onclick="filterArticles('Tips Hijab')" class="hover:text-white transition text-left">Panduan Styling Hijab</button></li>
+            <li><button onclick="filterArticles('Smart Budget')" class="hover:text-white transition text-left">Tips Hemat Sewa Kebaya</button></li>
+            <li><button onclick="filterArticles('Panduan Ukuran')" class="hover:text-white transition text-left">Cara Ukur Custom Resize</button></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-500">
+        <p>&copy; 2026 Kagumi Sewa Kebaya (Bandar Lampung). Seluruh hak cipta dilindungi undang-undang.</p>
+        <p class="flex items-center gap-2">
+          <span>Dirancang dengan keanggunan</span>
+          <span>•</span>
+          <span class="text-stone-400">Way Halim, Bandar Lampung</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- 8. FLOATING WHATSAPP BUTTON                -->
+  <!-- ========================================== -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center group">
+    <div class="hidden sm:block mr-3 bg-neutral-900 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+      Chat Konsultasi Sewa
+    </div>
+    <a 
+      href="https://wa.me/6282281998800" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform duration-200"
+      aria-label="Hubungi WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script>
+    const ITEMS_PER_PAGE = 6;
+    let currentPage = 1;
+    let activeCategory = 'all';
+    let searchQuery = '';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderArticleList();
+      setupHeader();
+    });
+
+    function setupHeader() {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isClosed = mobileMenu.classList.toggle('hidden');
+          const icon = mobileMenuBtn.querySelector('i');
+          if (icon) icon.className = isClosed ? 'fa-solid fa-bars text-xl' : 'fa-solid fa-xmark text-xl';
+        });
+
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-bars text-xl';
+          });
+        });
+      }
+
+      const header = document.getElementById('main-header');
+      if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 20) {
+            header.classList.add('shadow-md', 'bg-white/95');
+            header.classList.remove('bg-white/90');
+          } else {
+            header.classList.remove('shadow-md', 'bg-white/95');
+            header.classList.add('bg-white/90');
+          }
+        });
+      }
+
+      // Close modal on escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeArticleModal();
+      });
+
+      const modalOverlay = document.getElementById('article-modal');
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+          if (e.target === modalOverlay) closeArticleModal();
+        });
+      }
+    }
+
+    function renderArticleList() {
+      const container = document.getElementById('full-articles-grid');
+      const paginationContainer = document.getElementById('articles-pagination');
+      if (!container) return;
+
+      let filtered = ARTICLES;
+
+      if (activeCategory !== 'all') {
+        filtered = filtered.filter(a => a.category === activeCategory);
+      }
+
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase();
+        filtered = filtered.filter(a => 
+          a.title.toLowerCase().includes(q) || 
+          a.summary.toLowerCase().includes(q) ||
+          a.category.toLowerCase().includes(q)
+        );
+      }
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-16 text-center text-stone-500">
+            <i class="fa-solid fa-magnifying-glass text-4xl mb-3 text-stone-300"></i>
+            <p class="text-base font-medium">Tidak ada artikel yang cocok dengan pencarian Anda.</p>
+            <button onclick="resetFilters()" class="mt-4 px-5 py-2 text-xs bg-neutral-900 text-white rounded-full hover:bg-neutral-800">
+              Tampilkan Semua Artikel
+            </button>
+          </div>
+        `;
+        if (paginationContainer) {
+          paginationContainer.classList.add('hidden');
+          paginationContainer.innerHTML = '';
+        }
+        return;
+      }
+
+      // Hitung Pagination
+      const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, filtered.length);
+      const paginatedItems = filtered.slice(startIndex, endIndex);
+
+      // Render 6 artikel pada halaman aktif
+      container.innerHTML = paginatedItems.map(art => `
+        <article class="bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-video overflow-hidden bg-stone-100 cursor-pointer" onclick="openArticleModal(${art.id})">
+              <img 
+                src="${art.image}" 
+                alt="${art.title}" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+              />
+              <span class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-white/95 text-stone-900 text-[9px] sm:text-[11px] font-bold px-2 py-0.5 sm:px-2.5 sm:py-0.5 rounded-full shadow-sm">
+                ${art.category}
+              </span>
+            </div>
+            
+            <div class="p-3.5 sm:p-5 lg:p-6">
+              <div class="flex items-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs text-stone-400 mb-1.5 sm:mb-2.5">
+                <span><i class="fa-regular fa-calendar mr-1"></i>${art.date}</span>
+                <span>•</span>
+                <span><i class="fa-regular fa-clock mr-1"></i>${art.readingTime}</span>
+              </div>
+
+              <h3 
+                onclick="openArticleModal(${art.id})" 
+                class="font-serif text-xs sm:text-base lg:text-lg font-bold text-stone-900 group-hover:text-amber-800 transition-colors leading-snug cursor-pointer line-clamp-2">
+                ${art.title}
+              </h3>
+
+              <p class="text-[11px] sm:text-xs text-stone-600 mt-1 sm:mt-2.5 line-clamp-2 leading-relaxed">
+                ${art.summary}
+              </p>
+            </div>
+          </div>
+
+          <div class="p-3.5 pt-0 sm:p-5 sm:pt-0 lg:p-6 lg:pt-0 border-t border-stone-100 mt-2 sm:mt-4 flex items-center justify-between">
+            <button 
+              onclick="openArticleModal(${art.id})" 
+              class="text-[10px] sm:text-xs font-bold text-amber-800 hover:text-amber-900 inline-flex items-center gap-1 transition">
+              <span>Baca Selengkapnya</span>
+              <i class="fa-solid fa-arrow-right text-[9px] sm:text-[11px]"></i>
+            </button>
+
+            <span class="text-[9px] sm:text-[11px] text-stone-400 hidden sm:inline">Tips Kagumi</span>
+          </div>
+        </article>
+      `).join('');
+
+      // Render Pagination Kontrol (Hanya jika artikel melebihi 6)
+      if (paginationContainer) {
+        if (filtered.length > ITEMS_PER_PAGE) {
+          paginationContainer.classList.remove('hidden');
+
+          let pageButtonsHtml = '';
+          for (let p = 1; p <= totalPages; p++) {
+            if (p === currentPage) {
+              pageButtonsHtml += `
+                <button 
+                  onclick="changePage(${p})" 
+                  class="w-9 h-9 rounded-xl bg-neutral-900 text-white text-xs font-bold shadow-sm transition">
+                  ${p}
+                </button>
+              `;
+            } else {
+              pageButtonsHtml += `
+                <button 
+                  onclick="changePage(${p})" 
+                  class="w-9 h-9 rounded-xl bg-white hover:bg-stone-100 text-stone-700 text-xs font-semibold border border-stone-200 transition">
+                  ${p}
+                </button>
+              `;
+            }
+          }
+
+          paginationContainer.innerHTML = `
+            <div class="text-xs text-stone-500">
+              Menampilkan <span class="font-bold text-stone-900">${startIndex + 1} - ${endIndex}</span> dari <span class="font-bold text-stone-900">${filtered.length}</span> artikel
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button 
+                onclick="changePage(${currentPage - 1})"
+                ${currentPage === 1 ? 'disabled class="px-3.5 py-2 rounded-xl bg-stone-100 text-stone-300 text-xs font-semibold cursor-not-allowed"' : 'class="px-3.5 py-2 rounded-xl bg-white hover:bg-stone-100 text-stone-700 text-xs font-semibold border border-stone-200 transition flex items-center gap-1.5"'}>
+                <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                <span>Sebelumnya</span>
+              </button>
+
+              <div class="flex items-center gap-1.5">
+                ${pageButtonsHtml}
+              </div>
+
+              <button 
+                onclick="changePage(${currentPage + 1})"
+                ${currentPage === totalPages ? 'disabled class="px-3.5 py-2 rounded-xl bg-stone-100 text-stone-300 text-xs font-semibold cursor-not-allowed"' : 'class="px-3.5 py-2 rounded-xl bg-white hover:bg-stone-100 text-stone-700 text-xs font-semibold border border-stone-200 transition flex items-center gap-1.5"'}>
+                <span>Selanjutnya</span>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+              </button>
+            </div>
+          `;
+        } else {
+          paginationContainer.classList.add('hidden');
+          paginationContainer.innerHTML = '';
+        }
+      }
+
+      // Update active state di filter button
+      document.querySelectorAll('.art-filter-btn').forEach(btn => {
+        if (btn.dataset.cat === activeCategory) {
+          btn.classList.add('bg-neutral-900', 'text-white');
+          btn.classList.remove('bg-white', 'text-stone-700', 'hover:bg-stone-100');
+        } else {
+          btn.classList.remove('bg-neutral-900', 'text-white');
+          btn.classList.add('bg-white', 'text-stone-700', 'hover:bg-stone-100');
+        }
+      });
+    }
+
+    window.changePage = function(page) {
+      currentPage = page;
+      renderArticleList();
+      const topSection = document.getElementById('article-section-top');
+      if (topSection) {
+        topSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    window.filterArticles = function(cat) {
+      activeCategory = cat;
+      currentPage = 1;
+      renderArticleList();
+    };
+
+    window.handleArticleSearch = function() {
+      const input = document.getElementById('article-search-input');
+      searchQuery = input ? input.value : '';
+      currentPage = 1;
+      renderArticleList();
+    };
+
+    window.resetFilters = function() {
+      activeCategory = 'all';
+      searchQuery = '';
+      currentPage = 1;
+      const input = document.getElementById('article-search-input');
+      if (input) input.value = '';
+      renderArticleList();
+    };
+
+    window.openArticleModal = function(id) {
+      const article = ARTICLES.find(a => a.id === id);
+      if (!article) return;
+
+      const modal = document.getElementById('article-modal');
+      if (!modal) return;
+
+      document.getElementById('modal-article-img').src = article.image;
+      document.getElementById('modal-article-category').innerText = article.category;
+      document.getElementById('modal-article-date').innerText = `${article.date} • ${article.readingTime}`;
+      document.getElementById('modal-article-title').innerText = article.title;
+
+      const paragraphs = article.content.trim().split('\n\n').map(p => `
+        <p class="text-sm text-stone-700 leading-relaxed mb-4">${p.trim().replace(/\n/g, '<br>')}</p>
+      `).join('');
+
+      document.getElementById('modal-article-body').innerHTML = paragraphs;
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    };
+
+    window.closeArticleModal = function() {
+      const modal = document.getElementById('article-modal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    };
+  </script>
+</body>
+</html>

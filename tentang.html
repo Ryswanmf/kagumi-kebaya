@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami | Kagumi Sewa Kebaya Bandar Lampung</title>
+  <meta name="description" content="Kenali lebih dekat Kagumi Sewa Kebaya di Way Halim, Bandar Lampung. Kisah kami, visi, layanan fitting gratis resize, dan komitmen menghadirkan busana kebaya terbaik.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="logo-kagumi.png" type="image/png">
+  <link rel="apple-touch-icon" href="logo-kagumi.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#c5a059',
+              'gold-light': '#f5efdf',
+              rose: '#d48b96',
+              'rose-light': '#fdf0f2',
+              dark: '#1c1917',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#faf9f6] text-stone-800 antialiased min-h-screen flex flex-col justify-between selection:bg-rose-100 selection:text-stone-900">
+
+  <!-- ========================================== -->
+  <!-- 1. NAVBAR / HEADER (Sticky & Responsif)     -->
+  <!-- ========================================== -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/80 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo & Branding -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img 
+            src="logo-kagumi.png" 
+            alt="Kagumi Sewa Kebaya Logo" 
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform border border-amber-200/50"
+          />
+          <div class="flex flex-col">
+            <span class="font-serif text-lg sm:text-xl font-bold tracking-tight text-stone-900 leading-none">
+              Kagumi
+            </span>
+            <span class="text-[10px] tracking-widest uppercase font-semibold text-amber-800 mt-0.5">
+              Sewa Kebaya
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu Navigasi -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+          <a href="index.html#beranda" class="hover:text-stone-900 hover:font-semibold transition">Beranda</a>
+          <a href="katalog.html" class="hover:text-stone-900 hover:font-semibold transition">Katalog Kebaya</a>
+          <a href="tentang.html" class="text-stone-950 font-bold border-b-2 border-stone-900 pb-0.5 transition">Tentang</a>
+          <a href="artikel.html" class="hover:text-stone-900 hover:font-semibold transition">Artikel</a>
+          <a href="kontak.html" class="hover:text-stone-900 hover:font-semibold transition">Kontak</a>
+        </nav>
+
+        <!-- CTA WhatsApp Button (Desktop) -->
+        <div class="hidden md:flex items-center gap-3">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Pesan Sekarang</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex items-center gap-2 md:hidden">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#25D366] text-white text-sm shadow-sm"
+            aria-label="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </a>
+          <button 
+            id="mobile-menu-btn" 
+            class="p-2 rounded-lg text-stone-700 hover:text-stone-900 hover:bg-stone-100 focus:outline-none"
+            aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-5 shadow-lg">
+      <div class="flex flex-col space-y-3 text-sm font-medium text-stone-700">
+        <a href="index.html#beranda" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Beranda</a>
+        <a href="katalog.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Katalog Kebaya</a>
+        <a href="tentang.html" class="mobile-nav-link py-2 px-3 rounded-lg bg-stone-100 font-bold text-stone-900">Tentang Kami</a>
+        <a href="artikel.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Artikel & Tips</a>
+        <a href="kontak.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Kontak & Studio</a>
+        <div class="pt-2">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] text-white font-semibold shadow">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Pesan Sekarang via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 2. HERO SECTION HALAMAN TENTANG            -->
+  <!-- ========================================== -->
+  <main class="flex-1">
+    <section class="relative bg-gradient-to-b from-stone-100/90 via-[#faf8f5] to-white py-12 sm:py-20 border-b border-stone-200/60 overflow-hidden">
+      <!-- Glow Dekorasi -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-amber-100/40 blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-rose-100/40 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Breadcrumb Nav -->
+        <nav class="flex items-center gap-2 text-xs text-stone-500 mb-6">
+          <a href="index.html" class="hover:text-stone-900 transition flex items-center gap-1">
+            <i class="fa-solid fa-house text-[10px]"></i> Beranda
+          </a>
+          <span>/</span>
+          <span class="text-stone-800 font-semibold">Tentang Kagumi</span>
+        </nav>
+
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900 text-stone-100 text-xs font-semibold shadow-sm mb-4">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            <span>Mengenal Kagumi Sewa Kebaya</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-900 tracking-tight leading-[1.2]">
+            Menghadirkan Keanggunan Tradisi Modern untuk Setiap Momen Bersejarah
+          </h1>
+
+          <p class="text-sm sm:text-base text-stone-600 mt-4 leading-relaxed">
+            Berawal dari sebuah studio hangat di Way Halim, Bandar Lampung, kami berdedikasi menemani setiap langkah istimewa wisudawati dan calon pengantin dengan koleksi kebaya butik berkualitas prima, penyesuaian ukuran gratis, dan perawatan tanpa repot.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. KISAH & FILOSOFI KAGUMI                 -->
+    <!-- ========================================== -->
+    <section class="py-14 sm:py-20 bg-white border-b border-stone-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Visual & Gambar Studio -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-stone-100 aspect-[4/5] group">
+              <img 
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop" 
+                alt="Suasana Fitting Studio Kagumi Kebaya" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent"></div>
+
+              <div class="absolute bottom-5 left-5 right-5 text-white">
+                <span class="text-[11px] uppercase tracking-wider text-amber-300 font-bold">Studio Way Halim</span>
+                <p class="font-serif text-lg font-bold">Ruang Fitting Nyaman & Ramah</p>
+                <p class="text-xs text-stone-300">Konsultasi langsung bersama tim penata busana kami</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge Pencapaian -->
+            <div class="absolute -bottom-6 -right-3 sm:-bottom-8 sm:right-4 bg-white rounded-2xl p-4 shadow-xl border border-stone-200 flex items-center gap-3.5">
+              <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-800 flex items-center justify-center font-bold text-xl">
+                👘
+              </div>
+              <div>
+                <p class="text-lg font-bold text-stone-900 leading-tight">2.400+ Klien</p>
+                <p class="text-xs text-stone-500">Wisuda & Lamaran di Lampung</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teks Cerita & Visi Misi -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <span class="text-xs font-bold text-amber-800 uppercase tracking-widest mb-1 block">Kisah Kami</span>
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                Lahir dari Keinginan Mempermudah Setiap Wanita Tampil Sempurna
+              </h2>
+            </div>
+
+            <div class="space-y-4 text-xs sm:text-sm text-stone-600 leading-relaxed">
+              <p>
+                Menjelang momen kelulusan wisuda atau hari lamaran pertunangan, menjahit sehelai kebaya baru seringkali membutuhkan biaya jutaan rupiah, waktu pengerjaan berbulan-bulan, serta ketidakpastian apakah hasil jahitannya sesuai dengan ekspektasi. Yang sering terjadi, kebaya mahal tersebut hanya dikenakan satu kali sebelum tersimpan selamanya di lemari.
+              </p>
+              <p>
+                <strong>Kagumi Sewa Kebaya</strong> didirikan untuk mengubah paradigma tersebut. Kata <em>"Kagumi"</em> mencerminkan rasa takjub dan apresiasi kami atas keindahan tradisi kebaya Indonesia serta pesona anggun setiap wanita yang mengenakannya.
+              </p>
+              <p>
+                Kami menyediakan koleksi kebaya modern bertabur payet kristal dan mutiara Swarovski dengan potongan mutakhir, lengkap dengan kain songket, rok batik, bustier, layanan <strong>Free Custom Resize</strong> agar pakaian pas melekat di lekuk tubuh, serta <strong>Free Laundry Steril</strong> tanpa biaya tambahan.
+              </p>
+            </div>
+
+            <!-- Visi & Misi Box -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200/80">
+                <div class="flex items-center gap-2 text-stone-900 font-bold text-sm mb-1.5">
+                  <i class="fa-solid fa-eye text-amber-700"></i>
+                  <span>Visi Kami</span>
+                </div>
+                <p class="text-xs text-stone-500 leading-relaxed">
+                  Menjadi pilihan persewaan kebaya modern terdepan dan paling terpercaya di Provinsi Lampung dengan standar kualitas butik desainer.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200/80">
+                <div class="flex items-center gap-2 text-stone-900 font-bold text-sm mb-1.5">
+                  <i class="fa-solid fa-bullseye text-amber-700"></i>
+                  <span>Misi Kami</span>
+                </div>
+                <p class="text-xs text-stone-500 leading-relaxed">
+                  Menghadirkan busana kebaya berkelas dengan harga terjangkau, bebas stres perawatan, dan memberikan rasa percaya diri maksimal di hari bahagia Anda.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. EMPAT NILAI UTAMA (Core Values)          -->
+    <!-- ========================================== -->
+    <section class="py-14 sm:py-20 bg-[#faf8f5]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold text-amber-800 uppercase tracking-widest block mb-1">Nilai & Komitmen</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
+            Mengapa Mempercayakan Momen Anda Kepada Kagumi?
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-500 mt-2">
+            Kami menjaga setiap detail dari ujung jahitan hingga pengalaman fitting Anda.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="bg-white p-6 rounded-3xl border border-stone-200/80 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-800 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <h3 class="font-serif text-base font-bold text-stone-900 mb-2">Kualitas Butik Premium</h3>
+            <p class="text-xs text-stone-500 leading-relaxed">
+              Kain brokat Chantilly, tile elastis anti gatal, furing katun adem, serta sulaman payet mutiara handmade yang berkilau di bawah sorotan kamera.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl border border-stone-200/80 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-800 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <h3 class="font-serif text-base font-bold text-stone-900 mb-2">Free Resize Pas di Badan</h3>
+            <p class="text-xs text-stone-500 leading-relaxed">
+              Tim penjahit kami menyesuaikan ukuran lingkar dada, pinggang, dan lengan tanpa memotong kain, memastikan kebaya jatuh pas dan anggun di tubuh Anda.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl border border-stone-200/80 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-700 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="font-serif text-base font-bold text-stone-900 mb-2">Free Laundry Steril</h3>
+            <p class="text-xs text-stone-500 leading-relaxed">
+              Setiap busana melewati proses dry cleaning & steam laundry uap steril sebelum diserahkan. Setelah acara usai, Anda tinggal mengembalikannya tanpa mencuci.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl border border-stone-200/80 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3 class="font-serif text-base font-bold text-stone-900 mb-2">Konsultasi Hangat</h3>
+            <p class="text-xs text-stone-500 leading-relaxed">
+              Bebas berkonsultasi seputar perpaduan hijab, manset, dan pemilihan warna terbaik yang cocok dengan tone kulit serta tema dekorasi acara Anda.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. STATISTIK PENCAPAIAN                   -->
+    <!-- ========================================== -->
+    <section class="py-12 sm:py-16 bg-neutral-900 text-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-stone-800">
+          
+          <div class="pt-4 sm:pt-0">
+            <p class="font-serif text-3xl sm:text-4xl font-extrabold text-amber-400">2.400+</p>
+            <p class="text-xs sm:text-sm text-stone-400 mt-1">Klien Wisuda & Lamaran</p>
+          </div>
+
+          <div class="pt-4 sm:pt-0">
+            <p class="font-serif text-3xl sm:text-4xl font-extrabold text-white">100+</p>
+            <p class="text-xs sm:text-sm text-stone-400 mt-1">Koleksi Model Kebaya</p>
+          </div>
+
+          <div class="pt-4 sm:pt-0">
+            <p class="font-serif text-3xl sm:text-4xl font-extrabold text-amber-400">18.5K</p>
+            <p class="text-xs sm:text-sm text-stone-400 mt-1">Pengikut Instagram Aktif</p>
+          </div>
+
+          <div class="pt-4 sm:pt-0">
+            <p class="font-serif text-3xl sm:text-4xl font-extrabold text-white">4.9 / 5.0</p>
+            <p class="text-xs sm:text-sm text-stone-400 mt-1">Rating Kepuasan Pelanggan</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. PENGALAMAN DI STUDIO WAY HALIM         -->
+    <!-- ========================================== -->
+    <section class="py-14 sm:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div>
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-widest block mb-1">Studio Experience</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-4">
+              Kunjungi Studio Kami di Way Halim, Bandar Lampung
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-6">
+              Studio Kagumi Sewa Kebaya dirancang dengan suasana yang nyaman, bersih, dan privat. Dilengkapi dengan ruang ganti luas, cermin *full length* berlampu estetik, dan area tunggu yang ramah bagi keluarga atau pendamping.
+            </p>
+
+            <div class="space-y-3.5">
+              <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-stone-50 border border-stone-200/80">
+                <i class="fa-solid fa-map-location-dot text-amber-800 text-base mt-0.5"></i>
+                <div class="text-xs sm:text-sm">
+                  <strong class="text-stone-900 block font-bold">Lokasi Strategis</strong>
+                  <span class="text-stone-600">Terletak di Way Halim Permai (dekat kawasan PKOR), mudah diakses dari pusat kota Bandar Lampung, Unila, dan Itera.</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-stone-50 border border-stone-200/80">
+                <i class="fa-solid fa-calendar-check text-emerald-600 text-base mt-0.5"></i>
+                <div class="text-xs sm:text-sm">
+                  <strong class="text-stone-900 block font-bold">Sistem Fitting Terjadwal</strong>
+                  <span class="text-stone-600">Kami menyarankan reservasi terlebih dahulu agar sesi fitting Anda berlangsung tenang tanpa antrean yang terburu-buru.</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-stone-50 border border-stone-200/80">
+                <i class="fa-solid fa-hand-holding-heart text-rose-600 text-base mt-0.5"></i>
+                <div class="text-xs sm:text-sm">
+                  <strong class="text-stone-900 block font-bold">Pendampingan Stylist</strong>
+                  <span class="text-stone-600">Stylist kami siap memberikan rekomendasi model kebaya yang paling tepat sesuai postur tubuh dan warna kulit.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a 
+                href="https://wa.me/6282281998800" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="px-5 py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-bold shadow-md transition flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>Jadwalkan Kunjungan Fitting</span>
+              </a>
+
+              <a 
+                href="katalog.html" 
+                class="px-5 py-3 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-xs sm:text-sm font-semibold transition flex items-center gap-2">
+                <i class="fa-solid fa-vest-patches text-xs"></i>
+                <span>Lihat Katalog Kebaya</span>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-stone-100">
+              <img 
+                src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop" 
+                alt="Kebaya Display" 
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-stone-100 mt-6">
+              <img 
+                src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop" 
+                alt="Fitting Studio" 
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 8. FOOTER                                  -->
+  <!-- ========================================== -->
+  <footer class="bg-neutral-950 text-stone-400 text-xs py-12 border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-stone-800">
+        
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2.5 text-white font-serif text-lg font-bold mb-3">
+            <img src="logo-kagumi.png" alt="Kagumi Sewa Kebaya Logo" class="w-8 h-8 rounded-full object-cover border border-amber-300/40">
+            <span>Kagumi Sewa Kebaya</span>
+          </div>
+          <p class="text-stone-400 text-xs sm:text-sm max-w-sm leading-relaxed mb-4">
+            Pusat persewaan kebaya modern terpercaya di Way Halim, Bandar Lampung. Menghadirkan kecantikan tradisi dalam balutan gaya masa kini untuk wisuda, lamaran, dan perayaan istimewa Anda.
+          </p>
+          <div class="flex items-center gap-3 text-stone-300">
+            <a href="https://instagram.com/kagumi.sewakebaya" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://wa.me/6282281998800" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Way+Halim+Bandar+Lampung" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition">
+              <i class="fa-solid fa-location-dot text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold mb-3">Tautan Cepat</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html#beranda" class="hover:text-white transition">Beranda Utama</a></li>
+            <li><a href="katalog.html" class="hover:text-white transition">Katalog Kebaya</a></li>
+            <li><a href="tentang.html" class="text-white font-semibold">Tentang Kami</a></li>
+            <li><a href="artikel.html" class="hover:text-white transition">Artikel & Tips</a></li>
+            <li><a href="kontak.html" class="hover:text-white transition">Kontak & Studio</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold mb-3">Kategori Pilihan</h4>
+          <ul class="space-y-2">
+            <li><a href="katalog.html?kategori=emerald" class="hover:text-white transition">Emerald Blue Series</a></li>
+            <li><a href="katalog.html?kategori=matcha" class="hover:text-white transition">Matcha Strobe Series</a></li>
+            <li><a href="katalog.html?kategori=butter" class="hover:text-white transition">Butter Yellow & Gold</a></li>
+            <li><a href="katalog.html?kategori=engagement" class="hover:text-white transition">Engagement & Lamaran</a></li>
+            <li><a href="katalog.html?kategori=wisuda" class="hover:text-white transition">Wisuda Series</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-500">
+        <p>&copy; 2026 Kagumi Sewa Kebaya (Bandar Lampung). Seluruh hak cipta dilindungi undang-undang.</p>
+        <p class="flex items-center gap-2">
+          <span>Dirancang dengan keanggunan</span>
+          <span>•</span>
+          <span class="text-stone-400">Way Halim, Bandar Lampung</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- 9. FLOATING WHATSAPP BUTTON                -->
+  <!-- ========================================== -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center group">
+    <div class="hidden sm:block mr-3 bg-neutral-900 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+      Chat Konsultasi Sewa
+    </div>
+    <a 
+      href="https://wa.me/6282281998800" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform duration-200"
+      aria-label="Hubungi WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Mobile Hamburger Script -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isClosed = mobileMenu.classList.toggle('hidden');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) {
+          icon.className = isClosed ? 'fa-solid fa-bars text-xl' : 'fa-solid fa-xmark text-xl';
+        }
+      });
+
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          const icon = mobileMenuBtn.querySelector('i');
+          if (icon) icon.className = 'fa-solid fa-bars text-xl';
+        });
+      });
+    }
+
+    const header = document.getElementById('main-header');
+    if (header) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          header.classList.add('shadow-md', 'bg-white/95');
+          header.classList.remove('bg-white/90');
+        } else {
+          header.classList.remove('shadow-md', 'bg-white/95');
+          header.classList.add('bg-white/90');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

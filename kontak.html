@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak & Lokasi Studio | Kagumi Sewa Kebaya Bandar Lampung</title>
+  <meta name="description" content="Hubungi Kagumi Sewa Kebaya Way Halim, Bandar Lampung. Jadwalkan fitting gratis, konsultasi sewa kebaya wisuda & lamaran, serta panduan rute lokasi studio.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="logo-kagumi.png" type="image/png">
+  <link rel="apple-touch-icon" href="logo-kagumi.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#c5a059',
+              'gold-light': '#f5efdf',
+              rose: '#d48b96',
+              'rose-light': '#fdf0f2',
+              dark: '#1c1917',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#faf9f6] text-stone-800 antialiased min-h-screen flex flex-col justify-between selection:bg-rose-100 selection:text-stone-900">
+
+  <!-- ========================================== -->
+  <!-- 1. NAVBAR / HEADER (Sticky & Responsif)     -->
+  <!-- ========================================== -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/80 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo & Branding -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img 
+            src="logo-kagumi.png" 
+            alt="Kagumi Sewa Kebaya Logo" 
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform border border-amber-200/50"
+          />
+          <div class="flex flex-col">
+            <span class="font-serif text-lg sm:text-xl font-bold tracking-tight text-stone-900 leading-none">
+              Kagumi
+            </span>
+            <span class="text-[10px] tracking-widest uppercase font-semibold text-amber-800 mt-0.5">
+              Sewa Kebaya
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu Navigasi -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+          <a href="index.html#beranda" class="hover:text-stone-900 hover:font-semibold transition">Beranda</a>
+          <a href="katalog.html" class="hover:text-stone-900 hover:font-semibold transition">Katalog Kebaya</a>
+          <a href="tentang.html" class="hover:text-stone-900 hover:font-semibold transition">Tentang</a>
+          <a href="artikel.html" class="hover:text-stone-900 hover:font-semibold transition">Artikel</a>
+          <a href="kontak.html" class="text-stone-950 font-bold border-b-2 border-stone-900 pb-0.5 transition">Kontak</a>
+        </nav>
+
+        <!-- CTA WhatsApp Button (Desktop) -->
+        <div class="hidden md:flex items-center gap-3">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Pesan Sekarang</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex items-center gap-2 md:hidden">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#25D366] text-white text-sm shadow-sm"
+            aria-label="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </a>
+          <button 
+            id="mobile-menu-btn" 
+            class="p-2 rounded-lg text-stone-700 hover:text-stone-900 hover:bg-stone-100 focus:outline-none"
+            aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-5 shadow-lg">
+      <div class="flex flex-col space-y-3 text-sm font-medium text-stone-700">
+        <a href="index.html#beranda" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Beranda</a>
+        <a href="katalog.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Katalog Kebaya</a>
+        <a href="tentang.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Tentang Kami</a>
+        <a href="artikel.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-stone-50">Artikel & Tips</a>
+        <a href="kontak.html" class="mobile-nav-link py-2 px-3 rounded-lg bg-stone-100 font-bold text-stone-900">Kontak & Studio</a>
+        <div class="pt-2">
+          <a 
+            href="https://wa.me/6282281998800" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] text-white font-semibold shadow">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Pesan Sekarang via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 2. HERO SECTION HALAMAN KONTAK             -->
+  <!-- ========================================== -->
+  <main class="flex-1">
+    <section class="relative bg-gradient-to-b from-stone-100/90 via-[#faf8f5] to-white py-12 sm:py-20 border-b border-stone-200/60 overflow-hidden">
+      <!-- Glow Dekorasi -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-amber-100/40 blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-rose-100/40 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-xs text-stone-500 mb-6 font-medium">
+          <a href="index.html" class="hover:text-stone-900 transition flex items-center gap-1">
+            <i class="fa-solid fa-house text-[11px]"></i>
+            <span>Beranda</span>
+          </a>
+          <span class="text-stone-300">/</span>
+          <span class="text-stone-900 font-semibold">Kontak & Reservasi Studio</span>
+        </nav>
+
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200/60 text-amber-800 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-comments text-[11px]"></i>
+            <span>Layanan Ramah & Konsultasi Personal</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl font-bold text-stone-900 tracking-tight leading-tight">
+            Hubungi & Kunjungi Studio Kagumi Kebaya
+          </h1>
+
+          <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4">
+            Ingin berkonsultasi seputar kebaya wisuda, lamaran, atau fitting ukuran badan? Tim kami di Way Halim, Bandar Lampung siap menyambut dan mendampingi Anda menemukan paduan busana paling memesona.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. KARTU KANAL KOMUNIKASI UTAMA            -->
+    <!-- ========================================== -->
+    <section class="py-12 bg-white border-b border-stone-200/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- WhatsApp Card -->
+          <div class="bg-gradient-to-b from-stone-50 to-white rounded-3xl p-6 border border-stone-200/80 shadow-sm hover:shadow-md transition group">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <span class="text-[11px] font-bold text-emerald-800 uppercase tracking-wider bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60">
+              Fast Response
+            </span>
+            <h3 class="font-serif text-lg font-bold text-stone-900 mt-3 mb-1">
+              WhatsApp Resmi
+            </h3>
+            <p class="text-xs text-stone-500 mb-4 leading-relaxed">
+              Konsultasi sewa, cek ketersediaan tanggal, dan reservasi jadwal fitting privat di studio.
+            </p>
+            <div class="pt-3 border-t border-stone-100">
+              <div class="text-sm font-bold text-stone-900 mb-2">+62 822-8199-8800</div>
+              <a 
+                href="https://wa.me/6282281998800" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 transition">
+                <span>Mulai Chat Sekarang</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Instagram Card -->
+          <div class="bg-gradient-to-b from-stone-50 to-white rounded-3xl p-6 border border-stone-200/80 shadow-sm hover:shadow-md transition group">
+            <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-700 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <span class="text-[11px] font-bold text-pink-800 uppercase tracking-wider bg-pink-50 px-2.5 py-1 rounded-full border border-pink-200/60">
+              18.5K+ Pengikut
+            </span>
+            <h3 class="font-serif text-lg font-bold text-stone-900 mt-3 mb-1">
+              Instagram Katalog
+            </h3>
+            <p class="text-xs text-stone-500 mb-4 leading-relaxed">
+              Lihat update koleksi terbaru, video fitting kebaya, serta ulasan foto asli para pelanggan kami.
+            </p>
+            <div class="pt-3 border-t border-stone-100">
+              <div class="text-sm font-bold text-stone-900 mb-2">@kagumi.sewakebaya</div>
+              <a 
+                href="https://instagram.com/kagumi.sewakebaya" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-xs font-bold text-rose-700 hover:text-rose-800 transition">
+                <span>Kunjungi Profil IG</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Studio Location Card -->
+          <div class="bg-gradient-to-b from-stone-50 to-white rounded-3xl p-6 border border-stone-200/80 shadow-sm hover:shadow-md transition group">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-store"></i>
+            </div>
+            <span class="text-[11px] font-bold text-amber-900 uppercase tracking-wider bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200/60">
+              Way Halim, B. Lampung
+            </span>
+            <h3 class="font-serif text-lg font-bold text-stone-900 mt-3 mb-1">
+              Studio & Fitting Room
+            </h3>
+            <p class="text-xs text-stone-500 mb-4 leading-relaxed">
+              Ruang fitting sejuk ber-AC, cermin penuh, area parkir aman, dan pendampingan stylist gratis.
+            </p>
+            <div class="pt-3 border-t border-stone-100">
+              <div class="text-sm font-bold text-stone-900 mb-2">Buka Setiap Hari (09.00 - 18.00 WIB)</div>
+              <a 
+                href="#peta-lokasi" 
+                class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800 hover:text-amber-900 transition">
+                <span>Lihat Panduan Arah</span>
+                <i class="fa-solid fa-arrow-down text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. FORM RESERVASI & JADWAL STUDIO          -->
+    <!-- ========================================== -->
+    <section class="py-14 sm:py-20 bg-[#faf9f6]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Kolom Formulir Interaktif Booking WhatsApp (7 Kolom) -->
+          <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-stone-200/80 shadow-sm">
+            <div class="inline-flex items-center gap-2 text-xs font-bold text-amber-800 uppercase tracking-widest mb-2">
+              <i class="fa-regular fa-calendar-check text-[11px]"></i>
+              <span>Reservasi & Konsultasi Cepat</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-3">
+              Jadwalkan Fitting atau Tanya Stok
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 mb-8 leading-relaxed">
+              Isi data di bawah ini untuk menghubungkan langsung ke WhatsApp admin Kagumi. Format pesan akan otomatis terisi rapi sehingga admin dapat merespons lebih cepat.
+            </p>
+
+            <form id="contact-booking-form" onsubmit="handleContactBooking(event)" class="space-y-5">
+              
+              <!-- Nama & WhatsApp -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="client-name" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                    Nama Lengkap <span class="text-rose-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="client-name" 
+                    required 
+                    placeholder="Contoh: Sarah Nadia" 
+                    class="w-full px-4 py-3 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-stone-900 bg-stone-50/50 transition">
+                </div>
+
+                <div>
+                  <label for="client-phone" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                    Nomor WhatsApp <span class="text-rose-500">*</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="client-phone" 
+                    required 
+                    placeholder="0812-xxxx-xxxx" 
+                    class="w-full px-4 py-3 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-stone-900 bg-stone-50/50 transition">
+                </div>
+              </div>
+
+              <!-- Kategori Acara & Tanggal Acara -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="event-type" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                    Kategori Acara <span class="text-rose-500">*</span>
+                  </label>
+                  <select 
+                    id="event-type" 
+                    required 
+                    class="w-full px-4 py-3 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-stone-900 bg-stone-50/50 transition">
+                    <option value="" disabled selected>Pilih jenis acara Anda</option>
+                    <option value="Wisuda Kampus / Universitas">Wisuda Kampus (Unila, Itera, UIN, Malahayati, dll.)</option>
+                    <option value="Lamaran & Pertunangan">Lamaran / Tunangan (Engagement)</option>
+                    <option value="Prewedding / Photoshoot">Foto Prewedding / Studio Shoot</option>
+                    <option value="Bridesmaid / Seragam Pesta">Bridesmaid & Keluarga</option>
+                    <option value="Pesta / Kondangan Lainnya">Pesta / Acara Formal Lainnya</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="event-date" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                    Tanggal Pemakaian / Acara <span class="text-rose-500">*</span>
+                  </label>
+                  <input 
+                    type="date" 
+                    id="event-date" 
+                    required 
+                    class="w-full px-4 py-3 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-stone-900 bg-stone-50/50 transition">
+                </div>
+              </div>
+
+              <!-- Rencana Jadwal Fitting Studio -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="fitting-date" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                    Rencana Tanggal Fitting (Opsional)
+                  </label>
+                  <input 
+                    type="date" 
+                    id="fitting-date" 
+                    class="w-full px-4 py-3 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-stone-900 bg-stone-50/50 transition">
+                </div>
+
+                <div>
+                  <label for="fitting-time" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                    Pilihan Waktu Kunjungan
+                  </label>
+                  <select 
+                    id="fitting-time" 
+                    class="w-full px-4 py-3 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-stone-900 bg-stone-50/50 transition">
+                    <option value="Belum Ditentukan">Bisa kapan saja / Diskusi via WA</option>
+                    <option value="Pagi (09.00 - 12.00 WIB)">Pagi Hari (09.00 - 12.00 WIB)</option>
+                    <option value="Siang (13.00 - 15.30 WIB)">Siang Hari (13.00 - 15.30 WIB)</option>
+                    <option value="Sore (15.30 - 18.00 WIB)">Sore Hari (15.30 - 18.00 WIB)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Preferensi Warna / Model & Catatan -->
+              <div>
+                <label for="kebaya-notes" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                  Model Kebaya / Warna yang Diminati & Catatan Khusus
+                </label>
+                <textarea 
+                  id="kebaya-notes" 
+                  rows="3" 
+                  placeholder="Contoh: Suka warna Sage Green atau Dusty Pink, butuh resize lingkar dada 92 cm, perlu hijab pashmina senada..." 
+                  class="w-full px-4 py-3 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-stone-900 bg-stone-50/50 transition"></textarea>
+              </div>
+
+              <!-- Tombol Submit -->
+              <div class="pt-2">
+                <button 
+                  type="submit" 
+                  class="w-full py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20ba59] text-white text-sm sm:text-base font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3">
+                  <i class="fa-brands fa-whatsapp text-xl"></i>
+                  <span>Kirim Formulir ke WhatsApp Admin Kagumi</span>
+                </button>
+                <p class="text-[11px] text-stone-400 text-center mt-2.5">
+                  <i class="fa-solid fa-lock text-[10px] mr-1"></i> Data Anda aman dan langsung diteruskan ke WhatsApp resmi tanpa spam.
+                </p>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Kolom Informasi Jam Operasional & Alur Sewa (5 Kolom) -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- Card Jam Kerja & Layanan -->
+            <div class="bg-stone-900 text-white rounded-3xl p-6 sm:p-8 shadow-md">
+              <div class="flex items-center gap-2 text-xs font-bold text-amber-400 uppercase tracking-widest mb-3">
+                <i class="fa-regular fa-clock"></i>
+                <span>Jam Buka & Operasional</span>
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4">
+                Waktu Kunjungan Studio
+              </h3>
+
+              <div class="space-y-4 text-xs sm:text-sm">
+                <div class="flex justify-between items-center pb-3 border-b border-stone-800">
+                  <span class="text-stone-300 font-medium">Senin — Jumat</span>
+                  <span class="font-bold text-white">09.00 — 18.00 WIB</span>
+                </div>
+                <div class="flex justify-between items-center pb-3 border-b border-stone-800">
+                  <span class="text-stone-300 font-medium">Sabtu</span>
+                  <span class="font-bold text-white">09.00 — 18.00 WIB</span>
+                </div>
+                <div class="flex justify-between items-center pb-3 border-b border-stone-800">
+                  <span class="text-stone-300 font-medium">Minggu</span>
+                  <span class="font-bold text-amber-300">Khusus Reservasi Fitting</span>
+                </div>
+              </div>
+
+              <div class="mt-6 p-4 rounded-2xl bg-stone-800/80 border border-stone-700/60 text-xs text-stone-300 leading-relaxed">
+                <strong class="text-white block mb-1"><i class="fa-solid fa-circle-info text-amber-400 mr-1"></i> Tips Sebelum Datang:</strong>
+                Sangat disarankan mengonfirmasi jadwal fitting via WhatsApp minimal <strong>1 hari sebelumnya (H-1)</strong> agar stylist kami dapat menyiapkan kamar pas dan busana yang Anda incar.
+              </div>
+            </div>
+
+            <!-- Card 4 Langkah Sewa di Kagumi -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/80 shadow-sm">
+              <h4 class="font-serif text-lg font-bold text-stone-900 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-sparkles text-amber-700"></i>
+                <span>Alur Mudah Sewa di Kagumi</span>
+              </h4>
+
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-7 h-7 rounded-full bg-stone-100 text-stone-900 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5 border border-stone-200">
+                    1
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-bold text-stone-900">Konsultasi & Pilih Model</h5>
+                    <p class="text-[11px] text-stone-500 mt-0.5 leading-relaxed">
+                      Jelajahi katalog online kami atau tanyakan rekomendasi warna sesuai skintone Anda.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-7 h-7 rounded-full bg-stone-100 text-stone-900 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5 border border-stone-200">
+                    2
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-bold text-stone-900">Fitting Nyaman di Way Halim</h5>
+                    <p class="text-[11px] text-stone-500 mt-0.5 leading-relaxed">
+                      Coba langsung kebaya impian Anda. Nikmati <strong>Free Resize</strong> tanpa biaya penjahit.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-7 h-7 rounded-full bg-stone-100 text-stone-900 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5 border border-stone-200">
+                    3
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-bold text-stone-900">Ambil H-1 Acara Anda</h5>
+                    <p class="text-[11px] text-stone-500 mt-0.5 leading-relaxed">
+                      Kebaya diambil dalam kondisi wangi, rapi, dan telah lolos sterilisasi higienis.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-7 h-7 rounded-full bg-stone-100 text-stone-900 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5 border border-stone-200">
+                    4
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-bold text-stone-900">Kembalikan Tanpa Cuci</h5>
+                    <p class="text-[11px] text-stone-500 mt-0.5 leading-relaxed">
+                      Cukup serahkan kembali ke studio, <strong>Free Laundry Treatment</strong> sudah ditanggung Kagumi.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. PETA LOKASI & NAVIGASI STUDIO           -->
+    <!-- ========================================== -->
+    <section id="peta-lokasi" class="py-14 sm:py-20 bg-white border-t border-stone-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-bold text-amber-800 uppercase tracking-widest">Akses Mudah & Strategis</span>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold text-stone-900 mt-2">
+            Peta Lokasi Studio Way Halim
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-600 mt-3 leading-relaxed">
+            Berada di kawasan Way Halim, dekat kompleks PKOR Bandar Lampung. Mudah dijangkau dari kampus Unila, Itera, UBL, maupun pusat perbelanjaan Transmart dan Mall Boemi Kedaton (MBK).
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Peta Google Maps Embed (7 Kolom) -->
+          <div class="lg:col-span-7 aspect-[4/3] sm:aspect-video rounded-3xl overflow-hidden border border-stone-300 shadow-md relative bg-stone-100">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15888.756214588729!2d105.275!3d-5.385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40db7f90fbb66f%3A0x6b8aa57c703b302c!2sWay%20Halim%2C%20Bandar%20Lampung!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+              class="w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Petunjuk Rute & Arah (5 Kolom) -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <div class="p-5 rounded-2xl bg-stone-50 border border-stone-200/80">
+              <div class="flex items-center gap-3 text-stone-900 font-bold text-sm mb-1.5">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span>Dari Kampus Unila & UBL</span>
+              </div>
+              <p class="text-xs text-stone-600 leading-relaxed pl-11">
+                Sekitar 10–15 menit perjalanan melalui Jl. ZA. Pagar Alam & Jl. Sultan Agung menuju Way Halim.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-stone-50 border border-stone-200/80">
+              <div class="flex items-center gap-3 text-stone-900 font-bold text-sm mb-1.5">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <span>Dari Kampus Itera & Gerbang Tol Kotabaru</span>
+              </div>
+              <p class="text-xs text-stone-600 leading-relaxed pl-11">
+                Sekitar 12–18 menit melalui Jl. Ryacudu & Jl. Ki Maja ke pusat Way Halim.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-stone-50 border border-stone-200/80">
+              <div class="flex items-center gap-3 text-stone-900 font-bold text-sm mb-1.5">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-car"></i>
+                </div>
+                <span>Fasilitas Parkir & Kenyamanan</span>
+              </div>
+              <p class="text-xs text-stone-600 leading-relaxed pl-11">
+                Tersedia area parkir mobil dan motor yang leluasa, aman, serta lingkungan fitting yang privat bagi muslimah.
+              </p>
+            </div>
+
+            <div class="pt-3 flex flex-col sm:flex-row gap-3">
+              <a 
+                href="https://maps.google.com/?q=Way+Halim+Bandar+Lampung" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex-1 py-3.5 px-5 rounded-2xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs sm:text-sm font-semibold text-center transition flex items-center justify-center gap-2 shadow-sm">
+                <i class="fa-solid fa-diamond-turn-right text-amber-400"></i>
+                <span>Buka Rute di Google Maps</span>
+              </a>
+
+              <a 
+                href="https://wa.me/6282281998800?text=Halo%20Admin%20Kagumi%2C%20boleh%20minta%20share%20location%20studio%20di%20Way%20Halim%3F" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="py-3.5 px-5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs sm:text-sm font-semibold text-center transition flex items-center justify-center gap-2">
+                <i class="fa-solid fa-location-arrow text-emerald-600"></i>
+                <span>Minta Shareloc WA</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. FAQ KONTAK & FITTING (Tanya Jawab)      -->
+    <!-- ========================================== -->
+    <section class="py-14 sm:py-20 bg-[#faf9f6] border-t border-stone-200/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold text-amber-800 uppercase tracking-widest">Pertanyaan Populer</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mt-2">
+            Hal yang Sering Ditanyakan Sebelum Datang
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          
+          <div class="bg-white rounded-2xl p-5 border border-stone-200/80">
+            <h4 class="font-bold text-stone-900 text-sm flex items-center justify-between">
+              <span>Apakah harus membuat janji terlebih dahulu sebelum fitting?</span>
+              <i class="fa-solid fa-angle-down text-stone-400 text-xs"></i>
+            </h4>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed">
+              Sangat dianjurkan untuk konfirmasi via WhatsApp minimal H-1. Hal ini untuk memastikan ruang fitting tidak sedang penuh dan koleksi kebaya yang ingin Anda coba tersedia di studio.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-stone-200/80">
+            <h4 class="font-bold text-stone-900 text-sm flex items-center justify-between">
+              <span>Berapa biaya untuk fitting dan resize ukuran badan?</span>
+              <i class="fa-solid fa-angle-down text-stone-400 text-xs"></i>
+            </h4>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed">
+              Fitting di studio kami <strong>100% Gratis</strong>. Begitu pula dengan layanan penyesuaian ukuran (Free Resize Fit lingkar dada & pinggang) yang sudah termasuk dalam paket sewa tanpa biaya tambahan.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-stone-200/80">
+            <h4 class="font-bold text-stone-900 text-sm flex items-center justify-between">
+              <span>Apakah bisa sewa jarak jauh bagi yang berada di luar Bandar Lampung?</span>
+              <i class="fa-solid fa-angle-down text-stone-400 text-xs"></i>
+            </h4>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed">
+              Bisa! Anda cukup mengirimkan ukuran lingkar dada, lingkar pinggang, dan panjang badan ke WhatsApp admin kami. Kami siap mengirimkan kebaya via ekspedisi aman (travel atau kurir kilat).
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-stone-200/80">
+            <h4 class="font-bold text-stone-900 text-sm flex items-center justify-between">
+              <span>Kapan waktu terbaik untuk booking kebaya wisuda / lamaran?</span>
+              <i class="fa-solid fa-angle-down text-stone-400 text-xs"></i>
+            </h4>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed">
+              Untuk musim wisuda raya (biasanya bulan wisuda Unila, Itera, UIN) dan tanggal cantik pernikahan, kami menyarankan booking paling lambat <strong>2 hingga 4 minggu sebelum hari H</strong> untuk mengamankan kebaya favorit Anda.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 8. FOOTER                                  -->
+  <!-- ========================================== -->
+  <footer class="bg-neutral-950 text-stone-400 text-xs py-12 border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-stone-800">
+        
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2.5 text-white font-serif text-lg font-bold mb-3">
+            <img src="logo-kagumi.png" alt="Kagumi Sewa Kebaya Logo" class="w-8 h-8 rounded-full object-cover border border-amber-300/40">
+            <span>Kagumi Sewa Kebaya</span>
+          </div>
+          <p class="text-stone-400 text-xs sm:text-sm max-w-sm leading-relaxed mb-4">
+            Pusat persewaan kebaya modern terpercaya di Way Halim, Bandar Lampung. Menghadirkan kecantikan tradisi dalam balutan gaya masa kini untuk wisuda, lamaran, dan perayaan istimewa Anda.
+          </p>
+          <div class="flex items-center gap-3 text-stone-300">
+            <a href="https://instagram.com/kagumi.sewakebaya" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition" aria-label="Instagram">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://wa.me/6282281998800" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Way+Halim+Bandar+Lampung" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 flex items-center justify-center transition" aria-label="Google Maps">
+              <i class="fa-solid fa-location-dot text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold mb-3">Tautan Cepat</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html#beranda" class="hover:text-white transition">Beranda Utama</a></li>
+            <li><a href="katalog.html" class="hover:text-white transition">Katalog Kebaya</a></li>
+            <li><a href="tentang.html" class="hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="artikel.html" class="hover:text-white transition">Artikel & Tips</a></li>
+            <li><a href="kontak.html" class="text-white font-semibold">Kontak & Studio</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-stone-200 font-semibold mb-3">Informasi Kontak</h4>
+          <ul class="space-y-2 text-stone-400">
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+              <span>+62 822-8199-8800</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-instagram text-pink-400"></i>
+              <span>@kagumi.sewakebaya</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-amber-500 mt-0.5"></i>
+              <span>Way Halim, Bandar Lampung (Area PKOR Way Halim)</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-stone-500 text-[11px] gap-4">
+        <div>
+          &copy; 2026 Kagumi Sewa Kebaya. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="hover:text-stone-400 transition">Syarat & Ketentuan Sewa</a>
+          <span>&bull;</span>
+          <span>Way Halim, Bandar Lampung</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- 9. FLOATING WHATSAPP BUTTON                -->
+  <!-- ========================================== -->
+  <aside aria-label="Bantuan WhatsApp Cepat">
+    <a 
+      href="https://wa.me/6282281998800?text=Halo%20Admin%20Kagumi%2C%20saya%20ingin%20tanya%20sewa%20kebaya%20di%20Way%20Halim." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl hover:bg-[#20ba59] transition-all transform hover:scale-105 flex items-center gap-2.5 group"
+      aria-label="Chat WhatsApp Admin Kagumi">
+      <i class="fa-brands fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
+      <span class="hidden sm:inline font-bold text-xs">Konsultasi Kebaya</span>
+    </a>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- 10. JAVASCRIPT LOGIC                       -->
+  <!-- ========================================== -->
+  <script>
+    // Toggle Mobile Navigation
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isClosed = mobileMenu.classList.toggle('hidden');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) icon.className = isClosed ? 'fa-solid fa-bars text-xl' : 'fa-solid fa-xmark text-xl';
+      });
+
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          const icon = mobileMenuBtn.querySelector('i');
+          if (icon) icon.className = 'fa-solid fa-bars text-xl';
+        });
+      });
+    }
+
+    // Handle Form Booking / Kontak -> Kirim ke WhatsApp
+    function handleContactBooking(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('client-name').value.trim();
+      const phone = document.getElementById('client-phone').value.trim();
+      const eventType = document.getElementById('event-type').value;
+      const eventDate = document.getElementById('event-date').value;
+      const fittingDate = document.getElementById('fitting-date').value;
+      const fittingTime = document.getElementById('fitting-time').value;
+      const notes = document.getElementById('kebaya-notes').value.trim();
+
+      let message = `Halo Admin Kagumi Sewa Kebaya, saya ingin reservasi konsultasi sewa kebaya:\n\n`;
+      message += `• *Nama*: ${name}\n`;
+      message += `• *No. WhatsApp*: ${phone}\n`;
+      message += `• *Acara*: ${eventType}\n`;
+      message += `• *Tanggal Acara*: ${eventDate}\n`;
+      
+      if (fittingDate) {
+        message += `• *Rencana Fitting*: ${fittingDate} (${fittingTime})\n`;
+      } else {
+        message += `• *Waktu Fitting*: ${fittingTime}\n`;
+      }
+
+      if (notes) {
+        message += `• *Model / Catatan Khusus*: ${notes}\n`;
+      }
+
+      message += `\nMohon info ketersediaan kebaya dan jadwalnya. Terima kasih!`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const waUrl = `https://wa.me/6282281998800?text=${encodedMessage}`;
+
+      window.open(waUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
